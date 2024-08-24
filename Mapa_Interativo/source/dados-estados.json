@@ -1,0 +1,20 @@
+{
+    "51": {
+        "img": "../img/imagemHoverEstados/mato-grosso.jpg",
+        "nomeEstado": "Mato Grosso",
+        "extensaoTerritorial": "903.357 km²",
+        "habitantes": "3.658.649",
+        "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-tree'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-seedling'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-water'></i></span>",
+        "city": "Cuiabá",
+        "fontesEnergeticas": "<span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-water'></i></span><span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-wind'></i></span><span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-burn'></i></span><span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-mound'></i></span>"
+    },
+    "50": {
+        "img": "../img/imagemHoverEstados/mato-grosso-do-sul.webp",
+        "nomeEstado": "Mato  do Sul",
+        "extensaoTerritorial": "357.125 km²",
+        "habitantes": "2.757.013",
+        "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-leaf'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-seedling'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-water'></i></span>",
+        "city": "Campo Grande",
+        "fontesEnergeticas": "<span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-water'></i></span><span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-wind'></i></span><span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-burn'></i></span><span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-mound'></i></span>"
+    }
+}
