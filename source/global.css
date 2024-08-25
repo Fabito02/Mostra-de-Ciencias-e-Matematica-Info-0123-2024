@@ -174,7 +174,7 @@ header .buttonHeader::after {
   .close:hover.close::before {
     font-size: 13px;
     opacity: 1;
-    width: 120px;
+    width: calc(100% + 90px);
   }
   
   .close:hover {
