@@ -40,6 +40,28 @@ function openTopic(topico) {
 }
 
 // Função para fechar elemento flutuante
-function fecharElemento(bloco) {
-    bloco.parentElement.style.display = "none";
+function fecharCaixasFlutuantes(e) {
+    e.classList.add('hide');
+    document.querySelectorAll('#caixaFlutuante').forEach(caixa => {
+        caixa.classList.add('hide');
+    });
 }
+
+const modal = document.getElementById('modalExpandir');
+//funcão para expandir os dados do tópico e funcão para fechar modal
+function expandirTopico(topico) {
+    const elemento = topico.parentElement;
+    const texto = elemento.querySelector('.conteudoTopico').innerHTML;
+    
+    modal.querySelector('.text').innerHTML = texto;
+    modal.querySelector('#title').innerHTML = elemento.querySelector('.titleTopico').innerHTML;
+
+    modal.style.display = "flex";
+}
+
+
+function fecharModal(e) {
+    e.parentElement.parentElement.style.display = 'none'
+}
+
+

@@ -24,12 +24,17 @@ header {
     background-color: var(--cor-header);
     justify-content: space-between;
     height: 70px;
-    z-index: 800;
+    z-index: 5;
     backdrop-filter: blur(15px);
     box-shadow: 0px 6px 8px 0px #00000015;
     position: fixed;
     top: 0;
     width: calc(100% - 10px);
+}
+
+header .title {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
 .partesHeader {
@@ -99,3 +104,120 @@ header .buttonHeader::after {
 ::-webkit-scrollbar-thumb:active {
     background-color: #a6a9aa;
 }
+
+.close {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.234);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    top: 100px;
+    right: 15px;
+    background-color: #d24747;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease-in-out;
+  }
+
+.modal .close {
+    top: -45px;
+    right: 5px;
+  }
+  
+  .close.hide {
+    display: none;
+  }
+  
+  .close.close::before {
+    right: -5px;
+    font-size: 0px;
+    text-overflow: hidden;
+    color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background-color: #ffffffc0;
+    position: absolute;
+    content: 'Fechar Caixas';
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.2s, width 0.2s ease-out, font-size, 0.4s;
+  }
+  
+  .modal .close::before {
+    right: -5px;
+    font-size: 0px;
+    text-overflow: hidden;
+    color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background-color: #ffffffc0;
+    position: absolute;
+    content: 'Fechar Modal';
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.2s, width 0.2s ease-out, font-size, 0.4s;
+  }
+  
+  .close:hover.close::before {
+    font-size: 13px;
+    opacity: 1;
+    width: 120px;
+  }
+  
+  .close:hover {
+    background-color: #b34040;
+  }
+
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000053;
+    z-index: 1000;
+    position: fixed;
+    backdrop-filter: blur(15px);
+  }
+  
+  .conteudoModal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    height: 80vh;
+    background-color: #ffffffc0;
+    border-radius: 14px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
+  }
+
+  .conteudoModal .text {
+    line-height: 30px;
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+    overflow-y: auto;
+    border-radius: 14px;
+    width: calc(100% - 105px);
+    height: calc(100% - 10px);
+    background-color: #94949470;
+  }
+
+  .modal .title {
+  }

@@ -93,6 +93,69 @@ body {
   right: 70px;
 }
 
+.informacoesBase {
+  overflow: hidden;
+  background-color: var(--cor-box-background);
+  width: 300px;
+  position: fixed;
+  top: 155px;
+  right: 15px;
+  height: 200px;
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
+}
+
+.conteudoInformacoesBase {
+  position: relative;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #d7d7d770;
+  margin: 10px;
+  height: calc(100% - 20px);
+  transition: height 0.2s ease-out;
+}
+
+.infoElemento {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  margin-top: 10px;
+}
+
+.infoElemento .iconeSumario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  border-radius: 50%;
+}
+
+.infoElemento .icones {
+  margin-top: 2px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoElemento::after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #969696;
+}
+
 .sumarios {
   overflow: hidden;
   background-color: var(--cor-box-background);
@@ -100,20 +163,19 @@ body {
   position: fixed;
   top: 90px;
   left: 15px;
-  border-radius: 14px;
+  border-radius: 12px;
   backdrop-filter: blur(15px  );
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
 }
 
 .topicos {
   overflow: hidden;
-  padding-top: 40px;
   background-color: var(--cor-box-background);
   width: 360px;
   position: fixed;
   bottom: 15px;
   left: 15px;
-  border-radius: 14px;
+  border-radius: 12px;
   backdrop-filter: blur(15px  );
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
 }
@@ -160,8 +222,8 @@ body {
 .titleTopico {
   user-select: none;
   width: 100%;
-  text-align: center;
-  transform: translateX(-12px);
+  text-align: left;
+  transform: translateX(30px);
 }
 
 .conteudoTopico, .conteudoSumario {
@@ -176,35 +238,14 @@ body {
   transition: height 0.2s ease-out;
 }
 
-.conteudoTopico::-webkit-scrollbar, .conteudoSumario::-webkit-scrollbar {
+.conteudoTopico::-webkit-scrollbar, .conteudoSumario::-webkit-scrollbar, .conteudoInformacoesBase::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-.conteudoTopico::-webkit-scrollbar-track, .conteudoSumario::-webkit-scrollbar {
+.conteudoTopico::-webkit-scrollbar-track, .conteudoSumario::-webkit-scrollbar-track, .conteudoInformacoesBase::-webkit-scrollbar-track {
   background: #ffffff00;
   border-radius: 10px;
-}
-
-.fecharElemento {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  cursor: pointer;
-  top: 7px;
-  right: 7px;
-  background-color: #d24747;
-  color: white;
-  width: 28px;
-  height: 28px;
-  border: 0;
-  border-radius: 8px;
-  transition: background-color 0.2s ease, transform 0.07s ease-in-out;
-}
-
-.fecharElemento:hover {
-  background-color: #b34040;
 }
 
 .expandirTopico {
@@ -324,10 +365,10 @@ body {
 }
 
 #elementoFlutuante .nomeEstado {
-  display: inline;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 0px;
+  text-align: center;
   font-size: 17px;
+  width: 100%;
 }
 
 .iconClima {
@@ -346,6 +387,12 @@ body {
 .textoClima {
   display: inline-block;
   width: calc(100% - 50px);
+  margin-left: 5px;
+}
+
+.informacoesBase .textoClima {
+  display: inline-block;
+  width: 190px;
   margin-left: 5px;
 }
 
@@ -387,7 +434,7 @@ body {
   width: calc(50% - 3px);
 }
 
-.bloco .icon {
+.icon {
   margin-left:5px;
   margin-right:5px;
 }
@@ -429,4 +476,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#caixaFlutuante {
+  display: block;
+}
+
+#caixaFlutuante.hide {
+  display: none;
 }
