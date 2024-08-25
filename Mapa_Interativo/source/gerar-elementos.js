@@ -34,7 +34,7 @@ function getClima(city) {
                     data: data,
                     timestamp: agora
                 };
-                console.log(`Cache do clima da cidade ${city} atualizado`)
+                console.log(`Cache do clima da cidade "${city}" atualizado`)
                 return data;
             })
             .catch(error => {
