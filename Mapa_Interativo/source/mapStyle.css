@@ -2,7 +2,7 @@ body {
   overflow: hidden;
 }
 
-#map {
+.map {
   overflow: hidden;
   position: relative;
   width: 100vw;
@@ -94,13 +94,12 @@ body {
 }
 
 .informacoesBase {
-  overflow: hidden;
   background-color: var(--cor-box-background);
-  width: 300px;
+  width: 360px;
   position: fixed;
-  top: 155px;
-  right: 15px;
-  height: 200px;
+  top: 90px;
+  left: 15px;
+  height: 195px;
   border-radius: 12px;
   backdrop-filter: blur(15px);
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
@@ -156,10 +155,10 @@ body {
 .sumarios {
   overflow: hidden;
   background-color: var(--cor-box-background);
-  width: 360px;
+  width: 255px;
   position: fixed;
   top: 90px;
-  left: 15px;
+  right: 15px;
   border-radius: 12px;
   backdrop-filter: blur(15px  );
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
@@ -181,13 +180,23 @@ body {
   position: relative;
 }
 
-.corpoTopico, .corpoSumario {
+.corpoTopico {
   display: flex;
   align-items: center;
   position: relative;
   justify-content: space-between;
   cursor: pointer;
   height: 42px;
+  transition: background-color 0.25s ease-out;
+}
+
+.corpoSumario {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 35px;
   transition: background-color 0.25s ease-out;
 }
 
@@ -218,9 +227,8 @@ body {
 
 .titleTopico {
   user-select: none;
-  width: 100%;
+  width: calc(100% - 52px);
   text-align: left;
-  transform: translateX(30px);
 }
 
 .conteudoTopico, .conteudoSumario {
@@ -275,7 +283,14 @@ body {
   display: block;
 }
 
-.topico.active .conteudoTopico, .sumario.active .conteudoSumario {
+.topico.active .conteudoTopico {
+  padding: 15px;
+  margin: 15px;
+  height: 150px;
+  transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,  margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+}
+
+.sumario.active .conteudoSumario {
   padding: 15px;
   margin: 15px;
   height: 150px;
@@ -481,4 +496,208 @@ body {
 
 #caixaFlutuante.hide {
   display: none;
+}
+.fecharCaixasFlutuantes.close {
+  top: 90px;
+  left: 390px;
+}
+
+.fecharCaixasFlutuantes.close.close::before {
+  left: -5px;
+  text-align: right;
+  content: 'ㅤㅤㅤFechar Blocos';
+}
+
+.fecharCaixasFlutuantes.close:hover.close::before {
+  width: calc(100% + 95px);
+}
+
+.abrirBarraLateral {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .abrirBarraLateral {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.234);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    background-color: #4D9334;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    top: 90px;
+    left: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease-in-out;
+  }
+  
+  .abrirBarraLateral.abrirBarraLateral::before {
+    left: -5px;
+    font-size: 0px;
+    text-overflow: hidden;
+    color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background-color: #ffffffc0;
+    position: absolute;
+    content: 'ㅤㅤㅤAbrir barra lateral';
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.2s, width 0.2s ease-out, font-size, 0.4s;
+  }
+  
+  .abrirBarraLateral:hover.abrirBarraLateral::before {
+    font-size: 13px;
+    opacity: 1;
+    width: calc(100% + 110px);
+  }
+  
+  .abrirBarraLateral:hover {
+    background-color: #437a2f;
+  }
+  
+  .fecharBarraLateral.close.close::before {
+    right: -5px;
+    text-align: right;
+    content: 'Fechar barra lateral';
+  }
+
+  .fecharBarraLateral.close:hover.close::before {
+    width: calc(100% + 120px);
+  }
+
+  .fecharCaixasFlutuantes {
+    display: none;
+  }
+
+  .barraLateral.barraLateralFechada {
+    transform: translateX(-100%);
+  }
+  
+  .barraLateral, .conteudoTopico {
+    box-sizing: border-box;
+  }
+
+  .barraLateral::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  
+  .barraLateral::-webkit-scrollbar-track {
+    background: #ffffff00;
+    border-radius: 10px;
+  }
+
+  .sumarios {
+    width: 100%;
+  }
+
+  .close {
+    top: 10px;
+    right: 20px;
+  }
+
+  .corpoSumario {
+    height: 42px;
+  }
+  
+  .barraLateral {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 60px;
+    overflow: scroll;
+    z-index: 100;
+    height: 100vh;
+    background-color: #bdbdbdc7;
+    width: 100vw;
+    max-width: 550px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    backdrop-filter: blur(15px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .informacoesBase {
+    display: flex;
+    flex-direction: column;
+    overflow: unset;
+    background-color: var(--cor-box-background);
+    width: calc(100% - 10px);
+    position: relative;
+    top: unset;
+    left: unset;
+    height: auto;
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    box-shadow: unset;
+    margin-bottom: 6px
+  }
+  
+  .conteudoInformacoesBase {
+    position: relative;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-y: auto;
+    border-radius: 8px;
+    background-color: #d7d7d700;
+    margin: 0;
+    height: 240px;
+    transition: height 0.2s ease-out;
+  }
+
+  .sumarios {
+    overflow: unset;
+    background-color: var(--cor-box-background);
+    width: calc(100% - 10px);
+    position: relative;
+    top: unset;
+    right: unset;
+    border-radius: 12px 12px 6px 6px;
+    box-shadow: unset;
+    margin-bottom: 6px
+  }
+  
+  .topicos {
+    overflow: unset;
+    background-color: var(--cor-box-background);
+    width: calc(100% - 10px);
+    position: relative;
+    bottom: unset;
+    left: unset;
+    border-radius: 6px 6px 12px 12px;
+    backdrop-filter: blur(15px);
+    box-shadow: unset;
+  }
+  .conteudoTopico, .conteudoSumario {
+    overflow-y: scroll;
+    border-radius: 8px;
+    height: 0px;
+  }
+
+   .sumario.active .conteudoSumario {
+    padding: 15px;
+    margin: 0;
+    height: auto;
+    transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,  margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+  }
+
+  .topico.active .conteudoTopico {
+    padding: 15px;
+    margin: 0;
+    transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,  margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+  }
 }

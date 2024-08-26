@@ -147,6 +147,18 @@ function abrirCaixasFlutuantes() {
                 topicos.querySelector('.questoesGeograficas').innerHTML = estadoData.questoesGeograficas;
                 topicos.querySelector('.impactosAmbientais').innerHTML = estadoData.impactosAmbientais;
             }
+            abrirBarraLateral()
         });
     });
 }
+
+// tava com um bug e essa gambiarra resolveu
+function fecharCaixas() {
+    document.querySelector('.fecharCaixasFlutuantes').classList.add('hide');
+    document.querySelectorAll('#caixaFlutuante').forEach(caixa => {
+        caixa.classList.add('hide');
+    });
+}
+
+abrirCaixasFlutuantes()
+fecharCaixas()

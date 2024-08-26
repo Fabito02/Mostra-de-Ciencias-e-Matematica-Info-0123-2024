@@ -2,6 +2,7 @@
 const mapa = document.getElementById('map');
 const panzoom = Panzoom(mapa, {
     maxScale: 15,
+    minScale: 0.8,
     zoomWithWheel: true,
     pinchToZoom: true,
 });
@@ -24,12 +25,18 @@ function zoomOut() {
 
 // Script responsável por abrir os tópicos e sumário
 function openTopic(topico) {
-    let allTopics = document.querySelectorAll('.topico .sumario');
-    allTopics.forEach(function(elemento) {
-        elemento.classList.remove('active');
-    });
 
-    topico.classList.add('active');
+    if (topico.classList.contains('active') === true) {
+
+        topico.classList.remove('active');
+    } else {
+        let allTopics = document.querySelectorAll('.topico .sumario');
+        allTopics.forEach(function(elemento) {
+            elemento.classList.remove('active');
+        });
+        
+        topico.classList.add('active');
+    }
 	
     document.addEventListener('click', function fecharClickFora(event) {
         if (!topico.contains(event.target)) {
@@ -64,4 +71,10 @@ function fecharModal(e) {
     e.parentElement.parentElement.style.display = 'none'
 }
 
+function fecharBarraLateral() {
+    document.querySelector('.barraLateral').classList.add('barraLateralFechada');
+}
 
+function abrirBarraLateral() {
+    document.querySelector('.barraLateral').classList.remove('barraLateralFechada');
+}
