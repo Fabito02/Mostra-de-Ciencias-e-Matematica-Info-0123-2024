@@ -21,3 +21,16 @@ const observer = new MutationObserver(mutations => {
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
+
+function dropdown() {
+    menuHeader = document.getElementById("menuHeader")
+    buttonMenu = document.getElementById('buttonMenu')
+    if (menuHeader.classList.contains("show")) {
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>'
+    } else {
+        buttonMenu.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>'
+    }
+
+    menuHeader.classList.toggle("show");
+}
+

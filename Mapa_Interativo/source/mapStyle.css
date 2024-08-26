@@ -155,7 +155,7 @@ body {
 .sumarios {
   overflow: hidden;
   background-color: var(--cor-box-background);
-  width: 255px;
+  width: 300px;
   position: fixed;
   top: 90px;
   right: 15px;
@@ -196,7 +196,7 @@ body {
   position: relative;
   justify-content: space-between;
   cursor: pointer;
-  height: 35px;
+  height: 42px;
   transition: background-color 0.25s ease-out;
 }
 
@@ -226,6 +226,7 @@ body {
 }
 
 .titleTopico {
+  overflow: hidden;
   user-select: none;
   width: calc(100% - 52px);
   text-align: left;
@@ -293,7 +294,7 @@ body {
 .sumario.active .conteudoSumario {
   padding: 15px;
   margin: 15px;
-  height: 150px;
+  height: 300px;
   transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,  margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
 }
 
@@ -505,18 +506,49 @@ body {
 .fecharCaixasFlutuantes.close.close::before {
   left: -5px;
   text-align: right;
-  content: 'ㅤㅤㅤFechar Blocos';
+  content: '     Fechar Blocos';
 }
 
 .fecharCaixasFlutuantes.close:hover.close::before {
   width: calc(100% + 95px);
 }
 
-.abrirBarraLateral {
+@media (min-width: 920px) {
+  .abrirBarraLateral, #imgBarraLateral, #nomeEstadoBarraLateral {
+    display: none !important;
+  }
+}
+
+.abrirBarraLateral, #imgBarraLateral, #nomeEstadoBarraLateral {
   display: none;
 }
 
 @media (max-width: 920px) {
+
+  .nomeEstadoBarraLateral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: calc(100% - 10px);
+    border-radius: 6px 6px;
+    background-color: var(--cor-box-background);
+    margin-bottom: 6px;
+    margin-top: 1px;
+  }
+
+  #elementoFlutuante {
+    display: none !important;
+  }
+
+  #imgBarraLateral {
+    margin-bottom: 6px;
+    border-radius: 12px 12px 6px 6px;
+    object-fit: cover;
+    width: calc(100% - 10px);
+    height: 150px;
+  }
   .abrirBarraLateral {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.234);
     position: relative;
@@ -550,7 +582,7 @@ body {
     height: 20px;
     background-color: #ffffffc0;
     position: absolute;
-    content: 'ㅤㅤㅤAbrir barra lateral';
+    content: '     Abrir barra lateral';
     opacity: 0;
     width: 0;
     transition: opacity 0.2s, width 0.2s ease-out, font-size, 0.4s;
@@ -584,7 +616,7 @@ body {
     transform: translateX(-100%);
   }
   
-  .barraLateral, .conteudoTopico {
+  .barraLateral, .conteudoTopico, .nomeEstadoBarraLateral {
     box-sizing: border-box;
   }
 
@@ -633,7 +665,7 @@ body {
   .informacoesBase {
     display: flex;
     flex-direction: column;
-    overflow: unset;
+    overflow-block: hidden;
     background-color: var(--cor-box-background);
     width: calc(100% - 10px);
     position: relative;
@@ -641,7 +673,7 @@ body {
     left: unset;
     height: auto;
     border-radius: 6px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(0px);
     box-shadow: unset;
     margin-bottom: 6px
   }
@@ -663,28 +695,30 @@ body {
     overflow: unset;
     background-color: var(--cor-box-background);
     width: calc(100% - 10px);
+    backdrop-filter: blur(0px);
     position: relative;
     top: unset;
     right: unset;
-    border-radius: 12px 12px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
     box-shadow: unset;
     margin-bottom: 6px
   }
   
   .topicos {
     overflow: unset;
+    overflow-block: hidden;
     background-color: var(--cor-box-background);
     width: calc(100% - 10px);
     position: relative;
     bottom: unset;
     left: unset;
     border-radius: 6px 6px 12px 12px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(0px);
     box-shadow: unset;
   }
   .conteudoTopico, .conteudoSumario {
     overflow-y: scroll;
-    border-radius: 8px;
+    border-radius: 0px;
     height: 0px;
   }
 

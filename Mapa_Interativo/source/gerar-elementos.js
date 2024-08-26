@@ -137,6 +137,11 @@ function abrirCaixasFlutuantes() {
                 informacoesBase.querySelector('#biomas').innerHTML = estadoData.biomas;
                 informacoesBase.querySelector('#fontesEnergeticas').innerHTML = estadoData.fontesEnergeticas;
 
+                document.getElementById('imgBarraLateral').src = estadoData.img;
+                document.getElementById('nomeEstadoBarraLateral').innerHTML = estadoData.nomeEstado;
+                document.getElementById('imgBarraLateral').style.display = "block";
+                document.getElementById('nomeEstadoBarraLateral').style.display = "flex";
+
                 let topicos = document.querySelector('.topicos');
                 topicos.querySelector('.biomasTopico').innerHTML = estadoData.biomasTopico;
                 topicos.querySelector('.fontesEnergeticasTopico').innerHTML = estadoData.fontesEnergeticasTopico;
