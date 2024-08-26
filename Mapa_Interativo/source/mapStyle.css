@@ -565,6 +565,10 @@ body {
   .abrirBarraLateral:hover {
     background-color: #437a2f;
   }
+
+  .fecharBarraLateral {
+    display: flex;
+  }
   
   .fecharBarraLateral.close.close::before {
     right: -5px;
