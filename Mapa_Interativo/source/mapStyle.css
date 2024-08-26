@@ -584,7 +584,7 @@ body {
     transform: translateX(-100%);
   }
   
-  .barraLateral, .conteudoTopico, .conteudoSumario {
+  .barraLateral, .conteudoTopico, .conteudoSumario, .conteudoInformacoesBase {
     box-sizing: border-box;
   }
 
