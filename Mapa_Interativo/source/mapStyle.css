@@ -512,7 +512,7 @@ body {
   width: calc(100% + 95px);
 }
 
-.abrirBarraLateral, fecharBarraLateral {
+.abrirBarraLateral, .fecharBarraLateral {
   display: none;
 }
 
