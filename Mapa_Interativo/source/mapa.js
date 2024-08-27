@@ -6,7 +6,7 @@ const panzoom = Panzoom(mapa, {
     zoomWithWheel: true,
     pinchToZoom: true,
 });
-panzoom.zoom(2.5, { animate: true });
+panzoom.zoom(1.8, { animate: true });
 
 // controles de zoom com rotação do mouse
 mapa.addEventListener('wheel', (event) => {
