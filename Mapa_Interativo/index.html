@@ -48,14 +48,37 @@
 	<!-- Fim do modal -->
 
 	<!-- Começo chatbot -->
-	<div class="chatbot" id="chatbot">
-		<button class="close buttonStyle" onclick="fecharChatBot(this)"><i class="fa-solid fa-xmark"></i></button>
-		<div class="caixaMensagensChatbot" >
+	 <button class="btChatbot" onclick="abrirChatbot()"><i class="fa-solid fa-robot"></i></button>
+	<div class="chatbot hide" id="chatbot">
+
+		<div class="topoChat">
+			<button class="expandirChat" onclick="espandirChat(this)">
+				<i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+			</button>
+			<h2>ChatBot</h2>
 		</div>
+
+		<button class="close buttonStyle" onclick="fecharChatBot()"><i class="fa-solid fa-xmark"></i></button>
+		<div class="caixaMensagensChatbot" >
+			<div class="message sender">
+			  <p>Olá! Como você enrefoçbnaeroinbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkod´bbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkod´banreónero´bnkroeban´sá?</p>
+			</div>
+			<div class="message receiver">
+			  <p>Estou bem, obrigado! E você?efoçbnaeroinbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkod´bbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkodefoçbnaeroinbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkod´bbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkodefoçbnaeroinbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkod´bbonbkldfnbakẽnbdaóernbipoeńabkrfbnkerfblçrenfbklaẽrnbkraeńbireobarnkod</p>
+			</div>
+			<div class="message sender">
+			  <p>Olá! Como você esá?</p>
+			</div>
+			<div class="message receiver">
+			  <p>Estou bem, obrigado! E você?</p>
+			</div>
+		</div>
+
 		<div class="inputMensagem">
 			<input type="text" id="inputText" placeholder="Escreva sua mensagem...">
 			<button class="enviarMensagem"><i class="fa-solid fa-paper-plane"></i></button>
 		</div>
+
 	</div>
 	<!-- Fim chatbot -->
 
@@ -380,8 +403,11 @@
 		</svg>
 	  </div>
 	</center>
-	<button class="zoomButton aumentarZoom" onclick="zoomIn()"><i class="fa-solid fa-plus"></i></button>
-	<button class="zoomButton" onclick="zoomOut()"><i class="fa-solid fa-minus"></i></button>
+
+	<div class="btZoomContainer">
+		<button class="zoomButton aumentarZoom" onclick="zoomIn()"><i class="fa-solid fa-plus"></i></button>
+		<button class="zoomButton" onclick="zoomOut()"><i class="fa-solid fa-minus"></i></button>
+	</div>
 
     <div id="elementoFlutuante">
 		<img src="" alt="Imagem representando o Estado" id="img">

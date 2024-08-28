@@ -280,6 +280,34 @@ header .buttonHeader::after {
     overflow: hidden;
   }
 
+.btChatbot {
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  outline: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: #629151;
+  backdrop-filter: blur(15px);
+  z-index: 10;
+  transition: box-shadow 0.3s ease, transform 0.06s ease-in-out;
+}
+
+.btChatbot:hover {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.234);
+}
+.btChatbot:active {
+  transform: scale(0.9);
+}
+
 .chatbot {
   display: flex;
   align-items: flex-start;
@@ -291,11 +319,12 @@ header .buttonHeader::after {
   backdrop-filter: blur(15px);
   height: 400px;
   width: 340px;
-  bottom: 150px;
+  bottom: 90px;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
   right: 25px;
   transform: translateX(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease, width 0.35s ease-in-out, height 0.35s ease-in-out;
+  padding-top: 40px;
 }
 
 .chatbot.hide {
@@ -321,6 +350,13 @@ header .buttonHeader::after {
   background-color: #ffffff;
   border: none;
   outline: none;
+  width: 180px;
+  transition: width 0.35s ease-in-out;
+}
+
+.chatbot.expandido .inputMensagem #inputText {
+  width: 550px;
+  max-width: calc(100% - 140px);
 }
 
 .chatbot .inputMensagem .enviarMensagem {
@@ -354,6 +390,113 @@ header .buttonHeader::after {
   margin-top: 10px;
   background-color: #94949470;
 }
+
+.chatbot.expandido {
+  width: 1100px;
+  max-width: calc(100vw - 50px);
+  height: 700px;
+  max-height: calc(100vh - 250px);
+}
+
+.topoChat {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  position: absolute;
+  justify-content: space-between;
+  top: 0;
+}
+
+.topoChat h2 {
+  user-select: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.topoChat .expandirChat {
+  cursor: pointer;
+  z-index: 1;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: #00000000;
+  border: none;
+  margin-left: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.topoChat .expandirChat:hover {
+  background-color: #cccccc70;
+}
+
+.caixaMensagensChatbot {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 8px;
+}
+
+.caixaMensagensChatbot::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.caixaMensagensChatbot::-webkit-scrollbar-track {
+  background: #ffffff00;
+  border-radius: 10px;
+}
+
+.message {
+  margin: 10px;
+  position: relative;
+  max-width: 210px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  word-wrap: break-word;
+  transition: max-width 0.35s ease-in-out;
+}
+
+.chatbot.expandido .message {
+  max-width: calc(100% - 110px);
+}
+
+.message.sender {
+  background: #d1e7dd;
+  align-self: flex-end;
+}
+
+.message.sender::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  right: 12px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #d1e7dd transparent transparent transparent;
+}
+
+.message.receiver {
+  background: #f1f0f0;
+  align-self: flex-start;
+}
+
+.message.receiver::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 12px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #f1f0f0 transparent transparent transparent;
+}
+
 
   @media (min-width: 920px) {
 
