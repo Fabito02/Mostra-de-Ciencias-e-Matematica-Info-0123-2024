@@ -19,6 +19,7 @@
 		<div class="partesHeader headerDireita">
 			<a class="buttonHeader" href="#">Página Inicial</a>
 			<a class="buttonHeader" href="#">Projetos</a>
+			<a class="buttonHeader" href="#">Mapa Interativo</a>
 			<a class="buttonHeader" href="#">Quiz</a>
 			<a class="buttonHeader" href="#">Notícias</a>
 
@@ -29,19 +30,35 @@
 			<div class="menuConteudo">
 				<a href="#">Página Inicial</a>
 				<a href="#">Projetos</a>
+				<a href="#">Mapa Interativo</a>
 				<a href="#">Quiz</a>
 				<a href="#">Notícias</a>
 			</div>
 		</div>
 	<!-- Fim dos elementos do Header -->
 
+	<!-- Começo do modal -->
 	<div class="modal" id="modalExpandir" style="display: none;">
 		<div class="conteudoModal">
-			<h1 id="title"></h1>
 			<button class="close buttonStyle" onclick="fecharModal(this)"><i class="fa-solid fa-xmark"></i></button>
+			<h1 id="title"></h1>
 			<p class="text"></p>
 		</div>
 	</div>
+	<!-- Fim do modal -->
+
+	<!-- Começo chatbot -->
+	<div class="chatbot" id="chatbot">
+		<button class="close buttonStyle" onclick="fecharChatBot(this)"><i class="fa-solid fa-xmark"></i></button>
+		<div class="caixaMensagensChatbot" >
+		</div>
+		<div class="inputMensagem">
+			<input type="text" id="inputText" placeholder="Escreva sua mensagem...">
+			<button class="enviarMensagem"><i class="fa-solid fa-paper-plane"></i></button>
+		</div>
+	</div>
+	<!-- Fim chatbot -->
+
 	<center>
 	<div class="map" id="map">
 		<svg class="mapaBrasil" id="svg-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 460">
@@ -387,7 +404,7 @@
 		</div>
 	</div>
 		<button class="close fecharCaixasFlutuantes hide" onclick="fecharCaixasFlutuantes(this)"><i class="fa-solid fa-xmark"></i></button>
-		<button class="abrirBarraLateral" onclick="abrirBarraLateral()"><i class="bi bi-layout-text-sidebar"></i></button>
+		<button class="abrirBarraLateral" onclick="abrirBarraLateral()"><i class="bi bi-window-sidebar"></i></button>
 
 	<div class="elementosDaInterface barraLateral barraLateralFechada">	
 		<button class="close fecharBarraLateral" onclick="fecharBarraLateral()"><i class="fa-solid fa-xmark"></i></button>
@@ -397,8 +414,8 @@
 		<h2 id="nomeEstadoBarraLateral" class="nomeEstadoBarraLateral"></h2>
 
 		<div class="sumarios">
-			<div class="sumario active" onclick="openTopic(this)">
-				<div class="corpoSumario">
+			<div class="sumario active">
+				<div class="corpoSumario" onclick="openTopic(this)">
 					<span class="seta fa-solid"></span>
 					<h3 class="titleTopico">Sumário</h3>
 				</div>
@@ -447,8 +464,8 @@
 
 	  <div class="topicos hide" id="caixaFlutuante">	
 
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Biomas</h3>
 			</div>
@@ -456,8 +473,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Fontes Energéticas</h3>
 			</div>
@@ -465,8 +482,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Reservas Biológicas</h3>
 			</div>
@@ -474,8 +491,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Reservas Hídricas</h3>
 			</div>
@@ -483,8 +500,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Cultura e Povos Originários</h3>
 			</div>
@@ -492,8 +509,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">História</h3>
 			</div>
@@ -501,8 +518,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico">
+		<div class="topico">
+			<div class="corpoTopico" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Questões Geograficas</h3>
 			</div>
@@ -510,8 +527,8 @@
 			</div>
 				<button class="expandirTopico buttonStyle" id="expandirTopico" onclick="expandirTopico(this)"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 		</div>
-		<div class="topico" onclick="openTopic(this)">
-			<div class="corpoTopico topicoFinal">
+		<div class="topico">
+			<div class="corpoTopico topicoFinal" onclick="openTopic(this)">
 				<span class="seta fa-solid"></span>
 				<h3 class="titleTopico">Impactos Ambientais</h3>
 			</div>

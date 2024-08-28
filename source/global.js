@@ -22,6 +22,7 @@ const observer = new MutationObserver(mutations => {
 
 observer.observe(document.body, { childList: true, subtree: true });
 
+// Dropdown (Mobile)
 function dropdown() {
     menuHeader = document.getElementById("menuHeader")
     buttonMenu = document.getElementById('buttonMenu')
@@ -33,4 +34,11 @@ function dropdown() {
 
     menuHeader.classList.toggle("show");
 }
+
+// ChatBot 
+function fecharChatBot(e) {
+    let chatbot = e.closest('.chatbot');
+    chatbot.classList.add("hide");
+}
+
 

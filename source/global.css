@@ -188,6 +188,7 @@ header .buttonHeader::after {
   }
   
   .close.close::before {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.151);
     right: -5px;
     font-size: 0px;
     text-overflow: hidden;
@@ -207,22 +208,16 @@ header .buttonHeader::after {
   }
   
   .modal .close::before {
-    right: -5px;
-    font-size: 0px;
-    text-overflow: hidden;
-    color: #000;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    height: 20px;
-    background-color: #ffffffc0;
-    position: absolute;
     content: 'Fechar Modal';
-    opacity: 0;
-    width: 0;
-    transition: opacity 0.2s, width 0.2s ease-out, font-size, 0.4s;
+  }
+
+  .chatbot .close::before {
+    content: 'Fechar ChatBot';
+  }
+
+  .chatbot .close {
+    right: 0px;
+    top: -40px;
   }
   
   .close:hover.close::before {
@@ -253,11 +248,11 @@ header .buttonHeader::after {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
     width: 90vw;
-    max-width: 1000px;
-    height: 80vh;
+    max-width: 1300px;
+    height: auto;
     background-color: #ffffffc0;
     border-radius: 14px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
@@ -266,12 +261,12 @@ header .buttonHeader::after {
   .conteudoModal .text {
     line-height: 30px;
     text-align: justify;
-    padding: 30px;
+    padding: 25px;
     font-size: 1.1em;
     overflow-y: auto;
     border-radius: 14px;
     width: calc(100% - 100px);
-    height: 100%;
+    height: auto;
     background-color: #94949470;
   }
 
@@ -285,7 +280,88 @@ header .buttonHeader::after {
     overflow: hidden;
   }
 
+.chatbot {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10;
+  position: fixed;
+  background-color: var(--cor-box-background);
+  border-radius: 14px;
+  backdrop-filter: blur(15px);
+  height: 400px;
+  width: 340px;
+  bottom: 150px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
+  right: 25px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.chatbot.hide {
+  transform: translateX(calc(100% + 40px));
+}
+
+.chatbot .inputMensagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 55px;
+  border-radius: 0px 0px 14px 14px;
+  background-color: #94949470;
+}
+
+.chatbot .inputMensagem #inputText {
+  padding-left: 15px;
+  border-radius: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.chatbot .inputMensagem .enviarMensagem {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6ea55a;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 30px;
+  transition: background-color 0.2s, transform 0.07s ease-in-out;
+}
+
+.chatbot .inputMensagem .enviarMensagem:hover {
+  background-color: #629151;
+}
+
+.chatbot .inputMensagem .enviarMensagem:active {
+  transform: scale(0.9);
+}
+
+.chatbot .caixaMensagensChatbot {
+  width: calc(100% - 20px);
+  height: calc(100% - 75px);
+  border-radius: 14px;
+  margin-top: 10px;
+  background-color: #94949470;
+}
+
   @media (min-width: 920px) {
+
+    .conteudoModal .text {
+      padding: 20px;
+      width: calc(100% - 70px); 
+    }
+
     .menuHeader {
       display: none !important;
     }

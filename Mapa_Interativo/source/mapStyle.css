@@ -514,7 +514,7 @@ body {
 }
 
 @media (min-width: 920px) {
-  .abrirBarraLateral, #imgBarraLateral, #nomeEstadoBarraLateral {
+  #imgBarraLateral, #nomeEstadoBarraLateral {
     display: none !important;
   }
 }
@@ -526,7 +526,7 @@ body {
 @media (max-width: 920px) {
 
   .nomeEstadoBarraLateral {
-    font-size: 1.4em;
+    font-size: 1.3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -548,7 +548,8 @@ body {
     border-radius: 12px 12px 6px 6px;
     object-fit: cover;
     width: calc(100% - 10px);
-    height: 115px;
+    height: 23vw;
+    max-height: 160px;
   }
   .abrirBarraLateral {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.234);
@@ -571,6 +572,7 @@ body {
   }
   
   .abrirBarraLateral.abrirBarraLateral::before {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.151);
     left: -5px;
     font-size: 0px;
     text-overflow: hidden;
@@ -659,7 +661,6 @@ body {
     height: 100vh;
     background-color: #bdbdbdc7;
     width: 100vw;
-    max-width: 550px;
     top: 0;
     left: 0;
     position: fixed;
@@ -670,7 +671,6 @@ body {
   .informacoesBase {
     display: flex;
     flex-direction: column;
-    overflow-block: hidden;
     background-color: var(--cor-box-background);
     width: calc(100% - 10px);
     position: relative;
@@ -711,7 +711,6 @@ body {
   
   .topicos {
     overflow: unset;
-    overflow-block: hidden;
     background-color: var(--cor-box-background);
     width: calc(100% - 10px);
     position: relative;
@@ -737,6 +736,7 @@ body {
   .topico.active .conteudoTopico {
     padding: 15px;
     margin: 0;
+    height: 300px;
     transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,  margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
   }
 }

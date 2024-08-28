@@ -26,21 +26,21 @@ function zoomOut() {
 // Script responsável por abrir os tópicos e sumário
 function openTopic(topico) {
 
-    if (topico.classList.contains('active') === true) {
+    if (topico.parentElement.classList.contains('active') === true) {
 
-        topico.classList.remove('active');
+        topico.parentElement.classList.remove('active');
     } else {
         let allTopics = document.querySelectorAll('.topico .sumario');
         allTopics.forEach(function(elemento) {
             elemento.classList.remove('active');
         });
         
-        topico.classList.add('active');
+        topico.parentElement.classList.add('active');
     }
 	
     document.addEventListener('click', function fecharClickFora(event) {
-        if (!topico.contains(event.target)) {
-            topico.classList.remove('active');
+        if (!topico.parentElement.contains(event.target)) {
+            topico.parentElement.classList.remove('active');
             document.removeEventListener('click', fecharClickFora);
         }
     });
@@ -77,4 +77,10 @@ function fecharBarraLateral() {
 
 function abrirBarraLateral() {
     document.querySelector('.barraLateral').classList.remove('barraLateralFechada');
+}
+  
+window.onclick = function(event) {
+    if (event.target == document.getElementById('map') && !event.target == document.getElementById('svg-map')) {
+        fecharBarraLateral();
+    }
 }
