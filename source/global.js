@@ -36,7 +36,7 @@ function dropdown() {
 }
 
 // ChatBot 
-function espandirChat(e) {
+function expandirChat(e) {
     let chatbot = document.querySelector('.chatbot');
     if (chatbot.classList.contains('expandido')) {
         chatbot.classList.remove("expandido");
