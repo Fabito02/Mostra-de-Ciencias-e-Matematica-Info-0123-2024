@@ -547,7 +547,7 @@ footer .redesSociais {
   @media (max-width: 920px) {
 
     .chatbot.expandido {
-      width: calc(100vw - 40px);
+      width: calc(100vw - 60px);
       height: 70vh;
     }
 
