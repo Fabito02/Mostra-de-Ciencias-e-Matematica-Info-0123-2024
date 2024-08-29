@@ -1,0 +1,61 @@
+.caixa-projeto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.sala {
+  margin: 20px;
+  cursor: pointer;
+  width: 250px;
+  background-color: #ffffffc0;
+  text-align: center;
+  padding: 10px;
+  border-radius: 16px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: filter 0.2s ease-in-out, transform 0.07s ease-in-out;
+}
+
+.sala:hover {
+  filter: brightness(80%);
+}
+
+.sala:active {
+  transform: scale(0.9);
+}
+
+.sala img {
+  border-radius: 10px;
+  width: 123px;
+}
+
+.sala h3 {
+  font-size: 22px;
+}
+
+@media (max-width: 920px) {
+    .caixa-projeto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sala{
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        margin: 10px;
+    }
+
+    .sala h3{
+      margin-right: 20px;
+    }
+}

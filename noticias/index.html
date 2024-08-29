@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notícias</title>
+    <link rel="stylesheet" href="../source/css/global.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+  </head>
+  <body>
+
+    <!-- Começo dos elementos do Header -->
+    <header>
+      <div class="partesHeader">
+        <img class="logo" alt="Logo do site" src="../img/logo.svg">
+        <h1 class="title">Blog Informática</h1>
+      </div>
+      <div class="partesHeader headerDireita">
+        <a class="buttonHeader" href="../">Página Inicial</a>
+        <a class="buttonHeader" href="../projetos/">Projetos</a>
+        <a class="buttonHeader" href="../mapa-interativo/">Mapa Interativo</a>
+        <a class="buttonHeader" href="../quiz/">Quiz</a>
+        <a class="buttonHeader" href="../noticias/">Notícias</a>
+  
+        <button id="buttonMenu" class="buttonMenu" onclick="dropdown()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+      <div id="menuHeader" class="menuHeader">
+        <div class="menuConteudo">
+          <a href="../">Página Inicial</a>
+          <a href="../projetos/">Projetos</a>
+          <a href="../mapa-interativo/">Mapa Interativo</a>
+          <a href="../quiz/">Quiz</a>
+          <a href="../noticias/">Notícias</a>
+        </div>
+      </div>
+    <!-- Fim dos elementos do Header -->
+  
+    <!-- Começo do modal -->
+    <div class="modal" id="modalExpandir" style="display: none;">
+      <div class="conteudoModal">
+        <button class="close buttonStyle" onclick="fecharModal(this)"><i class="fa-solid fa-xmark"></i></button>
+        <h1 id="title"></h1>
+        <p class="text"></p>
+      </div>
+    </div>
+    <!-- Fim do modal -->
+  
+    <!-- Começo chatbot -->
+     <button class="btChatbot" onclick="abrirChatbot()"><i class="fa-solid fa-robot"></i></button>
+    <div class="chatbot hide" id="chatbot">
+  
+      <div class="topoChat">
+        <button class="expandirChat" onclick="espandirChat(this)">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </button>
+        <h2>ChatBot</h2>
+      </div>
+  
+      <button class="close buttonStyle" onclick="fecharChatBot()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="caixaMensagensChatbot" >
+      </div>
+  
+      <div class="inputMensagem">
+        <input type="text" id="inputText" placeholder="Escreva sua mensagem...">
+        <button class="enviarMensagem"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+  
+    </div>
+    <!-- Fim chatbot -->
+
+    <div class="corpoSite">
+      <div class="dadosNoticia">
+        <h2 id="tituloNoticia">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+        <p id="publicado">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p id="data">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+  
+      <img id="news-image" src="../favicon.png">
+  
+      <div id="news-conteudo">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut cumque delectus commodi impedit explicabo, eligendi ipsum repudiandae nesciunt molestias dolorem quos fugit libero ab quis rerum fugiat blanditiis esse deleniti.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut cumque delectus commodi impedit explicabo, eligendi ipsum repudiandae nesciunt molestias dolorem quos fugit libero ab quis rerum fugiat blanditiis esse deleniti.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut cumque delectus commodi impedit explicabo, eligendi ipsum repudiandae nesciunt molestias dolorem quos fugit libero ab quis rerum fugiat blanditiis esse deleniti.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut cumque delectus commodi impedit explicabo, eligendi ipsum repudiandae nesciunt molestias dolorem quos fugit libero ab quis rerum fugiat blanditiis esse deleniti.</p>
+      </div>
+  
+      <div class="mais">Mais sobre</div>
+    </div>
+
+  </body>
+</html>
+<script src="source/script.js"></script>
+<script src="../source/global.js"></script> 

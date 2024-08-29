@@ -546,7 +546,7 @@ body {
     margin-top: 1px;
   }
 
-  #elementoFlutuante {
+  #elementoFlutuante, .fecharCaixasFlutuantes {
     display: none !important;
   }
 
