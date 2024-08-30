@@ -34,7 +34,7 @@
         "impactosAmbientais": "<p>No Mato Grosso do Sul, os impactos ambientais têm sido significativos, especialmente no Pantanal, que é um dos maiores biomas úmidos do mundo. Alguns dos impactos ambientais ao estado são:</p><p><strong>Assoreamento do Rio Taquari:</strong> O assoreamento desse rio é um problema crítico, causando inundações quase permanentes em uma área de aproximadamente 11.000 km² nas sub-regiões da Nhecolândia e Paiaguás. Isso afeta drasticamente a pecuária, a principal atividade econômica da região.</p><p><strong>Mineração e Garimpos Ilegais:</strong> A exploração de diamantes, ouro e garimpos ilegais tem causado destruição ambiental, poluição do ar e das águas, além de riscos à saúde da população. O risco de rompimento de barragens também é uma preocupação constante.</p><p><strong>Mudanças Climáticas:</strong> Projeções indicam aumento de temperatura e redução de chuvas nos próximos 25 anos. A porção norte do estado poderá enfrentar um aumento de até 5,8°C na temperatura, enquanto a porção sul terá mais dias secos consecutivos.</p><p><strong>Barragens Irregulares:</strong> Mais de mil barragens irregulares foram identificadas em Mato Grosso do Sul, representando riscos ambientais, sociais e econômicos em caso de rompimento.</p>"
     },
     "21": {
-        "img": "../img/imagemHoverEstados/maranhao.jpg",
+        "img": "../img/imagemHoverEstados/maranhao.jpeg",
         "nomeEstado": "Maranhão",
         "extensaoTerritorial": "329.642,182 km²",
         "habitantes": "6.776.699",
@@ -51,7 +51,7 @@
         "impactosAmbientais": "<p>O Maranhão enfrenta diversos impactos ambientais, incluindo:</p> <p><strong>Poluição:</strong> Problemas significativos de poluição do ar e dos corpos d'água, com grande parte da população sem acesso a água tratada e coleta de esgoto.</p> <p><strong>Desmatamento:</strong> Comprometendo o ecossistema, especialmente em rios que sofrem com a poluição e diminuição do oxigênio.</p> <p><strong>Impactos nas Praias:</strong> Acúmulo de resíduos sólidos e esgoto nas praias, tornando algumas delas impróprias para banho, como a Praia da Ponta da D'Areia.</p>"
     },
     "31": {
-        "img": "../img/imagemHoverEstados/minas-gerais.jpg",
+        "img": "../img/imagemHoverEstados/minas-gerais.jpeg",
         "nomeEstado": "Minas Gerais",
         "extensaoTerritorial": "586.522,12 km²",
         "habitantes": "20.539.989",
