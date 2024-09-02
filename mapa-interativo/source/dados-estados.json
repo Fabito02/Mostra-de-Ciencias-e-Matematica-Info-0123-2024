@@ -68,12 +68,12 @@
         "impactosAmbientais": "<p>O Maranhão enfrenta diversos impactos ambientais, incluindo:</p> <p><strong>Poluição:</strong> Problemas significativos de poluição do ar e dos corpos d'água, com grande parte da população sem acesso a água tratada e coleta de esgoto.</p> <p><strong>Desmatamento:</strong> Comprometendo o ecossistema, especialmente em rios que sofrem com a poluição e diminuição do oxigênio.</p> <p><strong>Impactos nas Praias:</strong> Acúmulo de resíduos sólidos e esgoto nas praias, tornando algumas delas impróprias para banho, como a Praia da Ponta da D'Areia.</p>"
     },
     "13": {
-        "img": "../img/imagemHoverEstados/amazonas.",
-        "nomeEstado": "Minas Gerais",
-        "extensaoTerritorial": "586.522,12 km²",
-        "habitantes": "20.539.989",
-        "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-seedling'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-tree'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-sun'></i></span>",
-        "city": "Belo Horizonte",
+        "img": "../img/imagemHoverEstados/amazonas.jpg",
+        "nomeEstado": "Amazonas",
+        "extensaoTerritorial": "1.570.745,680 km²",
+        "habitantes": "3.941.613",
+        "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-tree'></i></span>",
+        "city": "Manaus",
         "fontesEnergeticas": "<span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-water'></i></span> <span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-burn'></i></span> <span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-mound'></i></span> <span class='iconeSumario fonteEnergetica'><i class='fa-solid fa-wind'></i></span>",
         "biomasTopico": "<p>O Maranhão apresenta um mosaico de biomas que inclui o Cerrado (64% do estado), Amazônia (35%) e Caatinga (1%). Estes biomas cobrem 99% do território do estado, e são fundamentais para a rica biodiversidade local. A vegetação predominante inclui Vegetação Secundária (26%), Savana (23%) e Floresta Sazonal Semidecidual (13%).</p> <p>O desafio para os gestores é conciliar a preservação desses ecossistemas com o desenvolvimento econômico e tecnológico do estado. O Parque Nacional dos Lençóis Maranhenses, por exemplo, é uma área de proteção ambiental    crucial, com 155 mil hectares de rios, lagos, manguezais e dunas.</p>",
         "fontesEnergeticasTopico": "<p>A matriz energética do Maranhão é diversificada e inclui:</p> <p><strong>Gás natural:</strong> Quatro usinas com capacidade total de 1.428 MW, a maior entre as fontes.</p> <p><strong>Hidrelétrica:</strong> Uma usina com capacidade de 1.092 MW.</p> <p><strong>Óleo combustível:</strong> Duas usinas.</p> <p><strong>Carvão mineral:</strong> Uma usina.</p> <p><strong>Biomassa:</strong> Uma usina.</p> <p><strong>Eólica:</strong> Quinze parques.</p>",
