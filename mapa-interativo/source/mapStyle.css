@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
 }
 
 .map {
@@ -7,6 +6,52 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  top: 0;
+}
+
+.sudeste {
+  fill: #ffb731;
+}
+
+.nordeste {
+  fill: #f85c47;
+}
+
+.centroOeste {
+  fill: #cfcd40;
+}
+
+.norte {
+  fill: #36a550;
+}
+
+.sul {
+  fill: #58a4d3;
+}
+
+
+.pantanal {
+  fill: #ffb731;
+}
+
+.cerrado {
+  fill: #f85c47;
+}
+
+.pampa {
+  fill: #cfcd40;
+}
+
+.mataAtlantica {
+  fill: #5da536;
+}
+
+.caatinga {
+  fill: #58a4d3;
+}
+
+.amazonia {
+  fill: #36a550;
 }
 
 #svg-map {
@@ -15,55 +60,102 @@ body {
 }
 
 .mapaBrasil {
-  max-width: 200px;
+  max-width: 800px;
 }
 
-.sudeste {
-  fill: #ffa601;
-}
-
-.nordeste {
-  fill: #ff3131;
-}
-
-.centroOeste {
-  fill: #c1ce0d;
-}
-
-.norte {
-  fill: #43a60e;
-}
-
-.sul {
-  fill: #1b8ed5;
+.bioma {
 }
 
 #svg-map path {
   transition: filter 0.25s ease;
 }
 
-#svg-map text {
+#svg-map .text {
   fill: #fff;
-  font: 12px Arial-BoldMT, sans-serif;
-  cursor: pointer
-}
-
-#svg-map a {
-  text-decoration: none
-}
-
-#svg-map a:hover {
   cursor: pointer;
-  text-decoration: none
+  pointer-events: none;
 }
 
-#svg-map a:hover path {
-  filter: brightness(50%);
+#svg-map text {
+  text-shadow: 0 0 2px #0000008d;
+  fill: #fff;
+  font: 12px 'Inter';
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: none;
 }
 
+#svg-map .bioma, #svg-map .estado {
+  text-decoration: none;
+  transition: filter 0.25s ease-in-out;
+}
+
+#svg-map .bioma:hover, #svg-map .estado:hover {
+  cursor: pointer;
+  text-decoration: none;
+  filter: brightness(60%);
+}
 
 #svg-map .circle {
+  pointer-events: none;
   fill: #0000004a;
+}
+
+#map2 {
+  display: none;
+}
+
+.mapaSwitcher {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: var(--cor-box-background);
+  border-radius: 25px;
+  width: 70px;
+  height: 25px;
+  padding: 5px;
+  top: 90px;
+  left: calc(50% - 40px);
+  z-index: 3;
+  backdrop-filter: blur(15px);
+  border-color: #cdcdcd91;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.213);
+}
+
+.pillSwitcher {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #188013;
+  color: white;
+  width: 25px;
+  font-size: 14px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, background-color 0.15s ease, right 0.3s ease-in-out;
+}
+
+.pillSwitcher:hover {
+  background-color: #449f40;
+  transform: scale(1.1);
+}
+
+.pillSwitcher:active {
+  transform: scale(0.85);
+}
+
+.pillSwitcher.active {
+  transform: translateX(45px);
+}
+
+.pillSwitcher.active:hover {
+  transform: translateX(45px) scale(1.1);
+}
+
+.pillSwitcher.active:active {
+  transform: translateX(45px) scale(0.85);
 }
 
 .btZoomContainer {
@@ -160,7 +252,6 @@ body {
 }
 
 .sumarios {
-  overflow: hidden;
   background-color: var(--cor-box-background);
   width: 300px;
   position: fixed;
@@ -198,6 +289,7 @@ body {
 }
 
 .corpoSumario {
+  border-radius: 12px 12px 0px 0px;
   display: flex;
   align-items: center;
   position: relative;
@@ -521,7 +613,7 @@ body {
 }
 
 @media (min-width: 920px) {
-  #imgBarraLateral, #nomeEstadoBarraLateral {
+  #imgBarraLateral, #nomeEstadoBarraLateral, .fecharBarraLateral {
     display: none !important;
   }
 }
