@@ -2,7 +2,7 @@
   "51": {
     "img": "../img/imagemHoverEstados/mato-grosso.jpg",
     "nomeEstado": "Mato Grosso",
-    "extensaoTerritorial": "903.357 km²",
+    "extensaoTerritorial": "903.208,36 km²",
     "habitantes": "3.658.649",
     "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-tree'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-seedling'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-water'></i></span>",
     "city": "Cuiabá",
@@ -19,7 +19,7 @@
   "50": {
     "img": "../img/imagemHoverEstados/mato-grosso-do-sul.webp",
     "nomeEstado": "Mato Grosso do Sul",
-    "extensaoTerritorial": "357.125 km²",
+    "extensaoTerritorial": "357.145,531 km²",
     "habitantes": "2.757.013",
     "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-leaf'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-seedling'></i></span><span class='iconeSumario bioma'><i class='fa-solid fa-water'></i></span>",
     "city": "Campo Grande",
@@ -51,7 +51,7 @@
     "impactosAmbientais": "<p>O Maranhão enfrenta diversos impactos ambientais, incluindo:</p> <p><strong>Poluição:</strong> Problemas significativos de poluição do ar e dos corpos d'água, com grande parte da população sem acesso a água tratada e coleta de esgoto.</p> <p><strong>Desmatamento:</strong> Comprometendo o ecossistema, especialmente em rios que sofrem com a poluição e diminuição do oxigênio.</p> <p><strong>Impactos nas Praias:</strong> Acúmulo de resíduos sólidos e esgoto nas praias, tornando algumas delas impróprias para banho, como a Praia da Ponta da D'Areia.</p>"
   },
   "31": {
-    "img": "../img/imagemHoverEstados/minas-gerais.jpeg",
+    "img": "../img/imagemHoverEstados/minas-gerais.jpg",
     "nomeEstado": "Minas Gerais",
     "extensaoTerritorial": "586.522,12 km²",
     "habitantes": "20.539.989",
@@ -68,7 +68,7 @@
     "impactosAmbientais": "<p>A mineração é uma atividade econômica e industrial que pode causar graves danos ao ecossistema de Minas Gerais. Os principais impactos ambientais da mineração incluem:</p> <p><strong>Poluição Atmosférica:</strong> Devido ao uso de explosivos que emitem gases poluentes.</p> <p><strong>Poluição Sonora:</strong> Causada pelas explosões.</p> <p><strong>Poluição das Águas:</strong> Pela lama gerada, que requer a construção de barragens para conter os rejeitos e evitar a contaminação química dos recursos hídricos e do solo.</p> <p><strong>Descaracterização do Solo:</strong> Alteração na estrutura e composição do solo.</p> <p>O rompimento da barragem de Fundão, da mineradora Samarco, em Mariana (MG), em novembro de 2015, evidenciou os riscos e impactos ambientais da mineração. O desastre causou um significativo impacto ambiental no município, incluindo:</p> <p><strong>Alteração da Paisagem:</strong> Mudanças visíveis no ambiente natural.</p> <p><strong>Contaminação dos Rios:</strong> Os rios do Carmo e Gualaxo do Norte foram contaminados por rejeitos de mineração.</p> <p><strong>Danos ao Patrimônio Cultural Material:</strong> Impactos negativos em bens culturais tangíveis.</p> <p><strong>Alteração do Modo de Vida da População Local:</strong> Mudanças nas condições de vida e atividades diárias da comunidade.</p> <p>O rompimento da barragem também destruiu o distrito de Bento Rodrigues e espalhou resíduos de mineração ao longo de quinhentos quilômetros, afetando gravemente a vida na Bacia do Rio Doce.</p>"
   },
   "13": {
-    "img": "../img/imagemHoverEstados/amazonas.jpg",
+    "img": "../img/imagemHoverEstados/amazonas.webp",
     "nomeEstado": "Amazonas",
     "extensaoTerritorial": "1.570.745,680 km²",
     "habitantes": "3.941.613",

@@ -49,8 +49,7 @@
 }
 
 .containerNoticia:hover {
-    filter: brightness(80%);
-    transform: scale(1.02);
+    filter: brightness(85%);
 }
 
 .containerNoticia:active {

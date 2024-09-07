@@ -1,20 +1,22 @@
 //Script para o zoom no mapa usando a API Panzoom
 const mapa1 = document.getElementById("map1");
 const panzoom1 = Panzoom(mapa1, {
-  maxScale: 15,
+  maxScale: 5,
+  minScale: 0.3,
   zoomWithWheel: true,
   pinchToZoom: true,
 });
 
 const mapa2 = document.getElementById("map2");
 const panzoom2 = Panzoom(mapa2, {
-  maxScale: 15,
+  maxScale: 5,
+  minScale: 0.3,
   zoomWithWheel: true,
   pinchToZoom: true,
 });
 
-panzoom1.zoom(0.5, { animate: true });
-panzoom2.zoom(0.5, { animate: true });
+panzoom1.zoom(0.7, { animate: true });
+panzoom2.zoom(0.7, { animate: true });
 
 // controles de zoom com rotação do mouse
 mapa1.addEventListener("wheel", (event) => {
@@ -29,13 +31,13 @@ mapa2.addEventListener("wheel", (event) => {
 
 // Funções de zoom com os botões de zoom
 function zoomIn() {
-  panzoom1.zoomIn(0.3, { animate: true });
-  panzoom2.zoomIn(0.3, { animate: true });
+  panzoom1.zoomIn(0.5, { animate: true });
+  panzoom2.zoomIn(0.5, { animate: true });
 }
 
 function zoomOut() {
-  panzoom1.zoomOut(0.3, { animate: true });
-  panzoom2.zoomOut(0.3, { animate: true });
+  panzoom1.zoomOut(0.5, { animate: true });
+  panzoom2.zoomOut(0.5, { animate: true });
 }
 
 // Script responsável por abrir os tópicos e sumário
@@ -43,7 +45,7 @@ function openTopic(topico) {
   if (topico.parentElement.classList.contains("active") === true) {
     topico.parentElement.classList.remove("active");
   } else {
-    let allTopics = document.querySelectorAll(".topico .sumario");
+    let allTopics = document.querySelectorAll(".topico");
     allTopics.forEach(function (elemento) {
       elemento.classList.remove("active");
     });
@@ -57,6 +59,19 @@ function openTopic(topico) {
       document.removeEventListener("click", fecharClickFora);
     }
   });
+}
+
+function openSumario(sumario) {
+  if (sumario.parentElement.classList.contains("active") === true) {
+    sumario.parentElement.classList.remove("active");
+  } else {
+    let allTopics = document.querySelectorAll(".sumario");
+    allTopics.forEach(function (elemento) {
+      elemento.classList.remove("active");
+    });
+
+    sumario.parentElement.classList.add("active");
+  }
 }
 
 // Função para fechar elemento flutuante
@@ -113,15 +128,15 @@ function toggleMapa() {
     map1.style.display = "none";
     map2.style.display = "block";
     panzoom2.reset();
-    panzoom1.zoom(0.5);
-    panzoom2.zoom(0.5);
+    panzoom1.zoom(0.7);
+    panzoom2.zoom(0.7);
   } else {
     pill.innerHTML = '<i class="fa-solid fa-tree"></i>';
     map1.style.display = "block";
     map2.style.display = "none";
     panzoom1.reset();
-    panzoom1.zoom(0.5);
-    panzoom2.zoom(0.5);
+    panzoom1.zoom(0.7);
+    panzoom2.zoom(0.7);
   }
 
   pill.classList.toggle("active");
