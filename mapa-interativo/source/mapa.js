@@ -15,8 +15,18 @@ const panzoom2 = Panzoom(mapa2, {
   pinchToZoom: true,
 });
 
-panzoom1.zoom(0.7, { animate: true });
-panzoom2.zoom(0.7, { animate: true });
+panzoom1.zoom(0.65, { 
+  animate: true, 
+  duration: 1000,
+  easing: "cubic-bezier(0.33, 1, 0.68, 1)" 
+});
+
+panzoom2.zoom(0.65, { 
+  animate: true, 
+  duration: 1000,
+  easing: "cubic-bezier(0.33, 1, 0.68, 1)" 
+});
+
 
 // controles de zoom com rotação do mouse
 mapa1.addEventListener("wheel", (event) => {
