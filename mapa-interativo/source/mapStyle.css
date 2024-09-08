@@ -88,13 +88,13 @@ body {
 
 #svg-map .bioma, #svg-map .estado {
   text-decoration: none;
-  transition: filter 0.25s ease-in-out;
+  transition: filter 0.35s ease-in-out;
 }
 
 #svg-map .bioma:hover, #svg-map .estado:hover {
   cursor: pointer;
   text-decoration: none;
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 
 #svg-map .circle {
