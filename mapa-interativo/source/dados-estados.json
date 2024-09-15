@@ -222,7 +222,7 @@
       },
     "53": {
       "img": "../img/imagemHoverEstados/distrito-federal.jpg",
-      "nomeEstado": "Distrito Federal (DF)",
+      "nomeEstado": "Distrito Federal",
       "extensaoTerritorial": "9.167,86 km²",
       "habitantes": "733.759",
       "biomas": "<span class='iconeSumario bioma'><i class='fa-solid fa-tree'></i></span>",
