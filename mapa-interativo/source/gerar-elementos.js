@@ -3,7 +3,7 @@ const key = "00d597d79abf4aaebac53307242208";
 const lang = "pt";
 var estadosData = {};
 
-// carrega os dados do JSON
+// carrega os dados do JSON para estados
 function carregarEstados() {
   return fetch("source/dados-estados.json")
     .then((response) => response.json())
@@ -47,15 +47,13 @@ function getClima(city) {
   }
 }
 
-carregarEstados();
-
-document.addEventListener("DOMContentLoaded", () => {
-  let elementoFlutuante = document.getElementById("elementoFlutuante");
+document.addEventListener("DOMContentLoaded",  function() {
+  let elementoFlutuante = document.getElementById("elementoFlutuante1");
 
   // carregar os dados dos estados
-  carregarEstados().then(() => {
+  carregarEstados().then( function() {
     estados.forEach((estado) => {
-      estado.addEventListener("mouseenter", () => {
+      estado.addEventListener("mouseenter",  function() {
         let code = estado.getAttribute("code");
         let estadoData = estadosData[code];
 
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      estado.addEventListener("mouseleave", () => {
+      estado.addEventListener("mouseleave",  function() {
         elementoFlutuante.classList.remove("show");
       });
     });
@@ -122,7 +120,7 @@ function abrirCaixasFlutuantes() {
 
   // carregar os dados dos estados
   document.querySelectorAll(".estado").forEach((estado) => {
-    estado.addEventListener("click", () => {
+    estado.addEventListener("click",  function() {
       let code = estado.getAttribute("code");
       let estadoData = estadosData[code];
 
@@ -147,9 +145,9 @@ function abrirCaixasFlutuantes() {
 
         // outros dados do estado
         informacoesBase.querySelector("#territorio").innerHTML =
-          estadoData.extensaoTerritorial;
+        `<i class="fa-solid fa-ruler-horizontal icon"></i> ${estadoData.extensaoTerritorial}`;
         informacoesBase.querySelector("#habitantes").innerHTML =
-          estadoData.habitantes;
+        `<i class="fa-solid fa-users icon"></i> ${estadoData.habitantes}`;
         informacoesBase.querySelector("#biomas").innerHTML = estadoData.biomas;
         informacoesBase.querySelector("#fontesEnergeticas").innerHTML =
           estadoData.fontesEnergeticas;
@@ -177,18 +175,60 @@ function abrirCaixasFlutuantes() {
         topicos.querySelector(".impactosAmbientais").innerHTML =
           estadoData.impactosAmbientais;
       }
+
       abrirBarraLateral();
+      
     });
   });
 }
 
-// tava com um bug e essa gambiarra resolveu
-function fecharCaixas() {
-  document.querySelector(".fecharCaixasFlutuantes").classList.add("hide");
-  document.querySelectorAll("#caixaFlutuante").forEach((caixa) => {
-    caixa.classList.add("hide");
-  });
+
+
+const biomas = document.querySelectorAll(".bioma");
+var biomasData = {}
+
+// carrega os dados do JSON para biomas
+function carregarBiomas() {
+  return fetch("source/dados-biomas.json")
+    .then((response) => response.json())
+    .then((dados) => {
+      biomasData = dados;
+      console.log()
+    })
+    .catch((error) => {
+      console.error("Erro ao carregar biomas:", error);
+    });
 }
 
-abrirCaixasFlutuantes();
-fecharCaixas();
+carregarBiomas()
+
+document.addEventListener("DOMContentLoaded",  function() {
+  let elementoFlutuante = document.getElementById("elementoFlutuante2");
+
+  // carregar os dados dos estados
+  carregarBiomas().then( function() {
+    biomas.forEach((bioma) => {
+      bioma.addEventListener("mouseenter",  function() {
+        let code = bioma.getAttribute("code");
+        let biomaData = biomasData[code];
+
+
+
+          // mostrar o elemento flutuante que segue o mouse
+          elementoFlutuante.classList.add("show");
+      });
+
+      bioma.addEventListener("mouseleave",  function() {
+        elementoFlutuante.classList.remove("show");
+      });
+    });
+
+    // atualizar a posição do elemento flutuante de acordo com o movimento do mouse
+    document.addEventListener("mousemove", (e) => {
+      if (elementoFlutuante.classList.contains("show")) {
+        elementoFlutuante.style.left = `${e.pageX + 20}px`;
+        elementoFlutuante.style.top = `${e.pageY + 10}px`;
+      }
+    });
+  });
+});

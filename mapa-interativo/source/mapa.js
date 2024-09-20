@@ -138,15 +138,15 @@ function toggleMapa() {
     map1.style.display = "none";
     map2.style.display = "block";
     panzoom2.reset();
-    panzoom1.zoom(0.7);
-    panzoom2.zoom(0.7);
+    panzoom1.zoom(0.65);
+    panzoom2.zoom(0.65);
   } else {
     pill.innerHTML = '<i class="fa-solid fa-tree"></i>';
     map1.style.display = "block";
     map2.style.display = "none";
     panzoom1.reset();
-    panzoom1.zoom(0.7);
-    panzoom2.zoom(0.7);
+    panzoom1.zoom(0.65);
+    panzoom2.zoom(0.65);
   }
 
   pill.classList.toggle("active");
