@@ -1,7 +1,23 @@
-// Função para aplicar lazy loading em uma imagem
+// Função para aplicar lazy loading em uma imagem com animação de carregamento
 function applyLazyLoading(img) {
     if (!img.dataset.src) return;
-    img.src = img.dataset.src;
+
+    const loader = document.getElementById('loading');
+    loader.style.display = 'block'; // Exibe o loader
+
+    const tempImg = new Image();
+    tempImg.src = img.dataset.src;
+
+    tempImg.onload = function () {
+        img.src = tempImg.src;
+        img.style.opacity = 1; // Exibe a imagem
+        loader.style.display = 'none'; // Oculta o loader
+    };
+
+    tempImg.onerror = function () {
+        console.error('Erro ao carregar a imagem:', tempImg.src);
+        loader.style.display = 'none'; // Oculta o loader em caso de erro
+    };
 }
 
 // Aplica lazy loading em todas as imagens que já estão no DOM
@@ -19,6 +35,9 @@ const observer = new MutationObserver(mutations => {
         });
     });
 });
+
+// Configura o MutationObserver para observar mudanças no DOM
+observer.observe(document.body, { childList: true, subtree: true });
 
 observer.observe(document.body, { childList: true, subtree: true });
 
