@@ -1,41 +1,24 @@
-// Função para aplicar lazy loading com animação de carregamento
+// Função para aplicar lazy loading em uma imagem
 function applyLazyLoading(img) {
-    const loader = document.getElementById('loading');
-    loader.style.display = 'block'; // Exibe o loader
-
-    // Quando a imagem carregar
-    img.onload = function () {
-        img.style.opacity = 1; // Exibe a imagem
-        loader.style.display = 'none'; // Oculta o loader
-    };
-
-    img.onerror = function () {
-        console.error('Erro ao carregar a imagem:', img.src);
-        loader.style.display = 'none'; // Oculta o loader em caso de erro
-    };
+    if (!img.dataset.src) return;
+    img.src = img.dataset.src;
 }
 
-// Aplica lazy loading em todas as imagens com o atributo "loading"
-document.querySelectorAll('img[loading="lazy"]').forEach(applyLazyLoading);
+// Aplica lazy loading em todas as imagens que já estão no DOM
+document.querySelectorAll('img').forEach(applyLazyLoading);
 
 // Observa o DOM para detectar novas imagens e aplica lazy loading nelas
 const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         mutation.addedNodes.forEach(node => {
-            if (node.tagName === 'IMG' && node.getAttribute('loading') === 'lazy') {
+            if (node.tagName === 'IMG') {
                 applyLazyLoading(node);
             } else if (node.nodeType === Node.ELEMENT_NODE) {
-                node.querySelectorAll('img[loading="lazy"]').forEach(applyLazyLoading);
+                node.querySelectorAll('img').forEach(applyLazyLoading);
             }
         });
     });
 });
-
-// Configura o MutationObserver para observar mudanças no DOM
-observer.observe(document.body, { childList: true, subtree: true });
-
-// Configura o MutationObserver para observar mudanças no DOM
-observer.observe(document.body, { childList: true, subtree: true });
 
 observer.observe(document.body, { childList: true, subtree: true });
 
