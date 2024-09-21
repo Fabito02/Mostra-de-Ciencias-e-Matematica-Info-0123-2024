@@ -85,7 +85,7 @@
     "impactosAmbientais": "<p>Mesmo sendo o bioma mais preservado do Brasil, cerca de 16% do bioma Amazônia já foi devastado, o que equivale a duas vezes e meia a área do estado de São Paulo. O desmatamento, as queimadas, a garimpagem, o agropastoreio e a biopirataria representam os principais problemas ambientais enfrentados pelo estado. O conjunto formado por essas ações devastadoras é responsável por graves mudanças climáticas em todo o planeta, como o aquecimento global. O estado do Amazonas, juntamente com a floresta que o constitui, é considerado um grande “resfriador” atmosférico e o maior abrigo da biodiversidade do mundo. Por isso, a construção de usinas hidrelétricas e estradas pode causar grandes mudanças socioambientais, incluindo aumento da pobreza, violência e surtos de doenças, sendo assim, é necessária uma ação mais efetiva dos órgãos governamentais e a construção de um maior número de reservas biológicas.</p>"
   },
   "15": {
-    "img": "../img/imagemHoverEstados/para.jpg",
+    "img": "../img/imagemHoverEstados/para.webp",
     "nomeEstado": "Pará",
     "extensaoTerritorial": "1.245.870,704 km²",
     "habitantes": "8.120.131",
@@ -102,7 +102,7 @@
     "impactosAmbientais": "<p>Apesar da recente redução no desmatamento, o estado do Pará ainda enfrenta desafios significativos relacionados a garimpo ilegal, queimadas e grilagem de terras. Em 2023, o <b>estado foi o mais afetado por incêndios no Brasil</b>, com mais de 40,8 mil focos de queimadas, representando 22% do total nacional, quase o dobro do segundo colocado, o Mato Grosso. </p> Embora a taxa de desmatamento tenha diminuído, em 2023, para o menor nível desde 2018, o Pará ainda responde por 40,85% da perda florestal acumulada na Amazônia, desde 2008. </p> A preparação para a <b>COP30</b>, que será realizada na capital do estado (Belém), no final do ano de 2025, destacará ainda mais os problemas ambientais e oferecerá uma oportunidade para promover legados sociais e ambientais.</p>"
   },
   "24": {
-    "img": "../img/imagemHoverEstados/rio-grande-do-norte.jpg",
+    "img": "../img/imagemHoverEstados/rio-grande-do-norte.webp",
     "nomeEstado": "Rio Grande do Norte",
     "extensaoTerritorial": "52.809,599 km²",
     "habitantes": "3.302.729",
