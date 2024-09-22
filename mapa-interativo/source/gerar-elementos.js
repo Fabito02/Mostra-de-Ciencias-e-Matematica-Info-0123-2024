@@ -136,23 +136,25 @@ document.addEventListener("DOMContentLoaded", function () {
       bioma.addEventListener("mouseenter", function () {
         let code = bioma.getAttribute("code");
         let biomaData = biomasData[code];
-        
-        if (biomaData) {
 
+        if (biomaData) {
           // outros dados do bioma
           elementoFlutuante.querySelector("#img").src = biomaData.img;
-          elementoFlutuante.querySelector("#nomeBioma").innerHTML = biomaData.nomeBioma;
-          elementoFlutuante.querySelector("#tipoClima").innerHTML = biomaData.tipoClima;
-          elementoFlutuante.querySelector("#territorio").innerHTML = biomaData.extensaoTerritorial;
-          elementoFlutuante.querySelector("#abrangencia").innerHTML = biomaData.abrangencia;
-          elementoFlutuante.querySelector("#fontesEnergeticas").innerHTML = biomaData.fontesEnergeticas;
+          elementoFlutuante.querySelector("#nomeBioma").innerHTML =
+            biomaData.nomeBioma;
+          elementoFlutuante.querySelector("#tipoClima").innerHTML =
+            biomaData.tipoClima;
+          elementoFlutuante.querySelector("#territorio").innerHTML =
+            biomaData.extensaoTerritorial;
+          elementoFlutuante.querySelector("#ameacas").innerHTML =
+            biomaData.ameacas;
+          elementoFlutuante.querySelector("#fontesEnergeticas").innerHTML =
+            biomaData.fontesEnergeticas;
 
           // mostrar o elemento flutuante que segue o mouse
           elementoFlutuante.classList.add("show");
         }
       });
-
-      
 
       bioma.addEventListener("mouseleave", function () {
         elementoFlutuante.classList.remove("show");
@@ -170,14 +172,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function abrirCaixasFlutuantesEstados() {
-
   document.querySelectorAll(".floatItem").forEach((caixa) => {
     caixa.classList.add("hide");
   });
 
   let informacoesBase = document.querySelector(".conteudoInformacoesBase");
-  informacoesBase.innerHTML = ''
-  informacoesBase.innerHTML = '<div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="territorio"></p></span></div><div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="habitantes"></p></span></div><div class="infoElemento"><span class="clima" id="clima"></span></div><div class="infoElemento"><div class="icones" id="biomas"></div></div><div class="infoElemento topicoFinal"><div class="icones" id="fontesEnergeticas"></div></div>'
+  informacoesBase.innerHTML = "";
+  informacoesBase.innerHTML =
+    '<div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="territorio"></p></span></div><div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="habitantes"></p></span></div><div class="infoElemento"><span class="clima" id="clima"></span></div><div class="infoElemento"><div class="icones" id="biomas"></div></div><div class="infoElemento topicoFinal"><div class="icones" id="fontesEnergeticas"></div></div>';
 
   // Exibir caixas flutuantes e botão de fechar
   document.querySelectorAll(".floatItem1").forEach((caixa) => {
@@ -250,17 +252,15 @@ function abrirCaixasFlutuantesEstados() {
   });
 }
 
-
-
 function abrirCaixasFlutuantesBiomas() {
-  
   document.querySelectorAll(".floatItem").forEach((caixa) => {
     caixa.classList.add("hide");
   });
 
   let informacoesBase = document.querySelector(".conteudoInformacoesBase");
-  informacoesBase.innerHTML = ''
-  informacoesBase.innerHTML = '<div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="territorio"></p></span></div><div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="tipoClima"></p></span></div><div class="infoElemento"><div class="icones" id="abrangencia"></div></div><div class="infoElemento topicoFinal"><div class="icones" id="fontesEnergeticas"></div></div></div>'
+  informacoesBase.innerHTML = "";
+  informacoesBase.innerHTML =
+    '<div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="territorio"></p></span></div><div class="infoElemento"><span class="item"><p class="textoElementoFlutuante" id="tipoClima"></p></span></div><div class="infoElemento"><div class="icones" id="ameacas"></div></div><div class="infoElemento topicoFinal"><div class="icones" id="fontesEnergeticas"></div></div></div>';
 
   // Exibir caixas flutuantes e botão de fechar
   document.querySelectorAll(".floatItem2").forEach((caixa) => {
@@ -276,25 +276,35 @@ function abrirCaixasFlutuantesBiomas() {
 
       if (biomaData) {
         // outros dados do bioma
-        informacoesBase.querySelector("#territorio").innerHTML = `<i class="fa-solid fa-ruler-horizontal icon"></i> ${biomaData.extensaoTerritorial}`;
-        informacoesBase.querySelector("#fontesEnergeticas").innerHTML =biomaData.fontesEnergeticas;
-        informacoesBase.querySelector("#tipoClima").innerHTML = `<i class="fa-solid fa-cloud-sun icon"></i> ${biomaData.tipoClima}`;
-        informacoesBase.querySelector("#abrangencia").innerHTML = biomaData.abrangencia;
+        informacoesBase.querySelector(
+          "#territorio"
+        ).innerHTML = `<i class="fa-solid fa-ruler-horizontal icon"></i> ${biomaData.extensaoTerritorial}`;
+        informacoesBase.querySelector("#fontesEnergeticas").innerHTML =
+          biomaData.fontesEnergeticas;
+        informacoesBase.querySelector(
+          "#tipoClima"
+        ).innerHTML = `<i class="fa-solid fa-cloud-sun icon"></i> ${biomaData.tipoClima}`;
+        informacoesBase.querySelector("#ameacas").innerHTML = biomaData.ameacas;
 
         document.getElementById("imgBarraLateral").src = biomaData.img;
-        document.getElementById("nomeEstadoBarraLateral").innerHTML = biomaData.nomeBioma;
+        document.getElementById("nomeEstadoBarraLateral").innerHTML =
+          biomaData.nomeBioma;
         document.getElementById("imgBarraLateral").style.display = "block";
-        document.getElementById("nomeEstadoBarraLateral").style.display = "flex";
+        document.getElementById("nomeEstadoBarraLateral").style.display =
+          "flex";
 
         let topicos = document.querySelector(".topicos2");
-        
+
         topicos.querySelector(".vegetacao").innerHTML = biomaData.vegetacao;
         topicos.querySelector(".climaTopico").innerHTML = biomaData.clima;
         topicos.querySelector(".rios").innerHTML = biomaData.rios;
         topicos.querySelector(".especies").innerHTML = biomaData.vegetacao;
-        topicos.querySelector(".animaisAmeacados").innerHTML = biomaData.vegetacao;
-        topicos.querySelector(".reservasBiologicas").innerHTML = biomaData.vegetacao;
-        topicos.querySelector(".fontesEnergeticas").innerHTML = biomaData.fontesEnergeticasTopico;
+        topicos.querySelector(".animaisAmeacados").innerHTML =
+          biomaData.vegetacao;
+        topicos.querySelector(".reservasBiologicas").innerHTML =
+          biomaData.vegetacao;
+        topicos.querySelector(".fontesEnergeticas").innerHTML =
+          biomaData.fontesEnergeticasTopico;
       }
 
       abrirBarraLateral();

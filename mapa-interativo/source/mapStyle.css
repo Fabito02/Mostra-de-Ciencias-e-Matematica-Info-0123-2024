@@ -338,7 +338,6 @@ body {
 .conteudoTopico,
 .conteudoSumario {
   position: relative;
-  text-align: justify;
   padding-left: 15px;
   padding-right: 15px;
   overflow-y: auto;
@@ -467,8 +466,8 @@ body {
   background-color: #d9d76f;
 }
 
-.estadoIcone {
-  background-color: #76b3e4;
+.ameacaAmbiental {
+  background-color: #f99882;
   font-weight: bold;
 }
 
@@ -821,7 +820,6 @@ body {
 
   .conteudoInformacoesBase {
     position: relative;
-    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 10px;
