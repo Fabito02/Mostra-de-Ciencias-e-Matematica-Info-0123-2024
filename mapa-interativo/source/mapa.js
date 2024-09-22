@@ -49,7 +49,7 @@ function openTopic(topico) {
   if (topico.parentElement.classList.contains("active") === true) {
     topico.parentElement.classList.remove("active");
   } else {
-    let allTopics = document.querySelectorAll(".topico");
+    let allTopics = document.querySelectorAll(".floatItem");
     allTopics.forEach(function (elemento) {
       elemento.classList.remove("active");
     });
@@ -81,7 +81,7 @@ function openSumario(sumario) {
 // Função para fechar elemento flutuante
 function fecharCaixasFlutuantes(e) {
   e.classList.add("hide");
-  document.querySelectorAll("#caixaFlutuante").forEach((caixa) => {
+  document.querySelectorAll(".floatItem").forEach((caixa) => {
     caixa.classList.add("hide");
   });
 }

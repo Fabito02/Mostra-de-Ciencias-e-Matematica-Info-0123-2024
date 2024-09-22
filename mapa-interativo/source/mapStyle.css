@@ -228,14 +228,14 @@ body {
   margin-top: 10px;
 }
 
-.infoElemento .iconeSumario {
+.infoElemento .iconeSumario  {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
   width: 25px;
   height: 25px;
-  font-size: 14px;
+  font-size: 12.5px;
   border-radius: 50%;
 }
 
@@ -455,6 +455,7 @@ body {
   margin-right: 10px;
   width: 30px;
   height: 30px;
+  font-size: 14px;
   border-radius: 50%;
 }
 
@@ -464,6 +465,11 @@ body {
 
 .fonteEnergetica {
   background-color: #d9d76f;
+}
+
+.estadoIcone {
+  background-color: #76b3e4;
+  font-weight: bold;
 }
 
 .elementoFlutuante {
@@ -594,6 +600,19 @@ body {
   border-radius: 50%;
 }
 
+
+
+.bloco .iconeSumario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 12.5px;
+  border-radius: 50%;
+}
+
 .bloco .icones {
   transform: translateX(10px);
   margin-top: 2px;
@@ -603,11 +622,11 @@ body {
   justify-content: center;
 }
 
-#caixaFlutuante {
+.floatItem {
   display: block;
 }
 
-#caixaFlutuante.hide {
+.floatItem.hide {
   display: none;
 }
 .fecharCaixasFlutuantes.close {
@@ -805,11 +824,12 @@ body {
     text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 10px;
     overflow-y: auto;
     border-radius: 8px;
     background-color: #d7d7d700;
     margin: 0;
-    height: 240px;
+    height: auto;
     transition: height 0.2s ease-out;
   }
 
