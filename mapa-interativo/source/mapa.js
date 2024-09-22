@@ -17,14 +17,8 @@ const panzoom2 = Panzoom(mapa2, {
 
 panzoom1.zoom(0.65, { 
   animate: true, 
-  duration: 1000,
-  easing: "cubic-bezier(0.33, 1, 0.68, 1)" 
-});
-
-panzoom2.zoom(0.65, { 
-  animate: true, 
-  duration: 1000,
-  easing: "cubic-bezier(0.33, 1, 0.68, 1)" 
+  duration: 1500,
+  easing: "cubic-bezier(0.3, 2.5, 0.6, 1)" 
 });
 
 

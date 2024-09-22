@@ -488,8 +488,8 @@ body {
   border-radius: 12px 12px 0 0;
 }
 
-.elementoFlutuante .nomeEstado {
-  margin-top: 0px;
+.elementoFlutuante .nomeElementoFlutuante {
+  margin-top: 2px;
   text-align: center;
   font-size: 17px;
   width: 100%;
