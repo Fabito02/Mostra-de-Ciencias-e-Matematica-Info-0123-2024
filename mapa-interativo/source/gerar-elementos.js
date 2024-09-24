@@ -117,6 +117,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (elementoFlutuante.classList.contains("show")) {
         elementoFlutuante.style.left = `${e.pageX + 20}px`;
         elementoFlutuante.style.top = `${e.pageY + 10}px`;
+
+        const bounding = elementoFlutuante.getBoundingClientRect();
+        
+        if (bounding.right > window.innerWidth) {
+          elementoFlutuante.style.left = `${window.innerWidth - bounding.width - 10}px`;
+        }
+        
+        if (bounding.bottom > window.innerHeight) {
+          elementoFlutuante.style.top = `${window.innerHeight - bounding.height - 10}px`;
+        }
       }
     });
   });
@@ -166,6 +176,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (elementoFlutuante.classList.contains("show")) {
         elementoFlutuante.style.left = `${e.pageX + 20}px`;
         elementoFlutuante.style.top = `${e.pageY + 10}px`;
+
+        const bounding = elementoFlutuante.getBoundingClientRect();
+        
+        if (bounding.right > window.innerWidth) {
+          elementoFlutuante.style.left = `${window.innerWidth - bounding.width - 10}px`;
+        }
+        
+        if (bounding.bottom > window.innerHeight) {
+          elementoFlutuante.style.top = `${window.innerHeight - bounding.height - 10}px`;
+        }
       }
     });
   });
@@ -298,13 +318,10 @@ function abrirCaixasFlutuantesBiomas() {
         topicos.querySelector(".vegetacao").innerHTML = biomaData.vegetacao;
         topicos.querySelector(".climaTopico").innerHTML = biomaData.clima;
         topicos.querySelector(".rios").innerHTML = biomaData.rios;
-        topicos.querySelector(".especies").innerHTML = biomaData.vegetacao;
-        topicos.querySelector(".animaisAmeacados").innerHTML =
-          biomaData.vegetacao;
-        topicos.querySelector(".reservasBiologicas").innerHTML =
-          biomaData.vegetacao;
-        topicos.querySelector(".fontesEnergeticas").innerHTML =
-          biomaData.fontesEnergeticasTopico;
+        topicos.querySelector(".especies").innerHTML = biomaData.especies;
+        topicos.querySelector(".animaisAmeacados").innerHTML = biomaData.animaisAmeacados;
+        topicos.querySelector(".reservasBiologicas").innerHTML = biomaData.reservasBiologicas;
+        topicos.querySelector(".fontesEnergeticas").innerHTML = biomaData.fontesEnergeticasTopico;
       }
 
       abrirBarraLateral();
