@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Milhão</title>
+    <link rel='stylesheet' href='jogoDoMilhao.css'></link>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" 
+    rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+ 
+ 
+
+
+<body>    
+<header>
+    <input type="button" value="➜" onclick="voltarPagina()">
+    <div class="title">
+    <h1>QUIZ</h1></div>
+</header>
+<div class="quiz" id="quiz">
+    <div id="pergunta">
+        <div class="caixa-pergunta">
+            <h3 id="question">PERGUNTA</h3>
+        </div>
+    </div>
+        <legend id='introducao'></legend>
+    <div class="conjuntoRespostas cima">
+        <input type="button" class="respostas" id="letraA">
+        <input type="button" class="respostas" id="letraB">
+    </div>
+    <div class="conjuntoRespostas baixo">
+        <input type="button" class="respostas" id="letraC">
+        <input type="button" class="respostas" id="letraD">
+    </div>
+
+    </div>
+    <audio id="audioAcertoid">
+        <source src="audioacerto.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioErroid">
+        <source src="audioerro.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioTerminoid">
+        <source src="termino.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <div id="pontuacaoFinal">
+        <div class="container">
+            <h1 id="tituloPontuacao">Ranking dos Biomas</h1>
+            <!-- Bioma 1 -->
+            <div class="bioma">
+                <img src="https://www.aulatica.com.br/wp-content/uploads/2021/01/bioma-amazonia-caracteristicas.jpg" alt="Bioma 1">
+                <div class="bioma-details">
+                    <h2>Bioma Amazônico</h2>
+                    <p id="amazoniaAcertos"></p>
+                </div>
+            </div>
+            <!-- Bioma 2 -->
+            <div class="bioma">
+                <img src="http://ciclovivo.com.br/wp-content/uploads/2018/09/iStock-881903436.jpg" alt="Bioma 2">
+                <div class="bioma-details">
+                    <h2>Bioma Cerrado</h2>
+                    <p id="cerradoAcertos"></p>
+                </div>
+            </div>
+            <div class="bioma">
+                    <img src="https://geoinovacoes.com.br/wp-content/uploads/2021/04/high-angle-shot-of-the-exotic-wild-plants-growing-among-the-rocks-at-the-tatacoa-desert-colombia-1.jpg" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Caatinga</h2>
+                        <p id="caatingaAcertos"></p>
+                    </div>
+            </div>
+            <div class="bioma">
+                    <img src="https://www.en-vols.com/wp-content/uploads/afmm/2023/03/GettyImages-814127490_HEADER_Mata-Atlantica_MED.jpg" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Mata Atlântica</h2>
+                        <p id="mataAcertos"></p>
+                    </div>
+            </div>
+            <div class="bioma">
+                    <img src="https://i0.wp.com/fueradeeje.com/wp-content/uploads/2020/03/DESTINOS-PARA-CONOCER-EN-LA-PAMPA-02-2-scaled.jpg?fit=2560%2C1706&ssl=1" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Pampa</h2>
+                        <p id="pampaAcertos"></p>
+                    </div>
+            </div>
+            <div class="bioma">
+                    <img src="https://www.optimistdaily.com/wp-content/uploads/shutterstock_1520274866-1536x1024.jpg" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Pantanal</h2>
+                        <p id="pantanalAcertos"></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='QuizBiomas.js'></script>
+</body>
+</html>
