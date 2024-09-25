@@ -135,7 +135,7 @@ function toggleMapa() {
     panzoom1.zoom(0.65);
     panzoom2.zoom(0.65);
   } else {
-    pill.innerHTML = '<i class="fa-solid fa-tree"></i>';
+    pill.innerHTML = '<span class="material-symbols-rounded">forest</span>';
     map1.style.display = "block";
     map2.style.display = "none";
     panzoom1.reset();
