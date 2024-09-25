@@ -6,34 +6,8 @@
   margin-top: 50px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.inicial {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 5px;
-  font-size: 18px;
-}
-
-.inicial-button {
-  background-color: #cf7e3c73;
-  border: none;
-  border-radius: 10px;
-  padding: 7px;
-  transition: box-shadow 0.3s, backgrond-color 0.3s;
-}
-
-.inicial-button:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  background-color: #f1f1f1;
-}
-
 .caixa-pergunta {
-  background-color: #4D9334;
+  background-color: #56983f;
   border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -59,7 +33,7 @@ legend {
 .respostas {
   flex-wrap: wrap;
   border: 0;
-  background-color: #bfd582;
+  background-color: #c6d798;
   display: flex;
   text-align: center;
   align-content: center;
