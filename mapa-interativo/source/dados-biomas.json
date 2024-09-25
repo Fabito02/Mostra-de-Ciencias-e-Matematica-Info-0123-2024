@@ -75,7 +75,7 @@
     "fontesEnergeticasTopico": "<p>A Caatinga apresenta uma matriz energética diversificada, essencial para o desenvolvimento da região. Entre as principais fontes energéticas, destacam-se:</p> <h3>Energia Hidrelétrica</h3> <p><strong>Rio São Francisco:</strong> Este rio é crucial para a geração de energia hidrelétrica. As usinas hidrelétricas ao longo do rio contribuem significativamente para o abastecimento elétrico do Nordeste, além de irrigar terras agrícolas adjacentes.</p> <h3>Energia Solar</h3> <p>A região da Caatinga possui alto potencial para a geração de energia solar devido à incidência elevada de radiação solar. Projetos de energia solar têm sido implementados para aproveitar essa fonte renovável e reduzir a dependência de combustíveis fósseis.</p> <h3>Energia Eólica</h3> <p>Com ventos constantes, a Caatinga também apresenta oportunidades para a instalação de parques eólicos. A energia eólica tem se tornado uma alternativa viável e sustentável para complementar a matriz energética da região.</p> <h3>Energia Termelétrica</h3> <p>As usinas termelétricas, que utilizam gás natural e biomassa, também são fontes de energia na Caatinga, especialmente em períodos de seca ou alta demanda. Estas usinas ajudam a garantir a continuidade do abastecimento energético.</p> <h3>Biomassa</h3> <p>A biomassa, originada da decomposição de matéria orgânica, é utilizada como uma fonte energética sustentável, contribuindo para a geração de eletricidade e aquecimento.</p>"
   },
   "6": {
-    "img": "../img/imagemHoverBiomas/mata-atlantica.webp",
+    "img": "../img/imagemHoverBiomas/amazonia.jpg",
     "nomeBioma": "Amazônia",
     "extensaoTerritorial": "4.196.943 km²",
     "tipoClima": "Equatorial",
