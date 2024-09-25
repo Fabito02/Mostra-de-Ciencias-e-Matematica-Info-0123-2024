@@ -1,13 +1,3 @@
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #F4F4F4;
-  font-family: "inter";
-}
-
 .quiz {
   display: flex;
   align-items: center;
@@ -17,51 +7,6 @@ body {
 }
 h2 {
   font-size: medium;
-}
-
-header {
-  width: 100vw;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  height: 85px;
-}
-
-header input[type='button'] {
-  position: absolute;
-  margin-left: auto;
-  margin-right: 30px;
-  margin-inline-start: 30px;
-  background-color: #a98363;
-  color: rgb(247, 247, 247);
-  border-style: solid;
-  border-radius: 6px;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: auto;
-  height: 35px;
-  font-weight: 600;
-  transition: background-color 0.2s, color 0.2s;
-  border-width: 2.5px;
-  border-color: #a98363;
-  font-size: 20px;
-  transform: rotate(180deg);
-}
-
-header input[type='button']:hover {
-  background-color: #ffffff00;
-  color: #a98363;
-}
-
-header .title {
-  font-family: 'Courier', monospace;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  width: min-content;
-  border-radius: 5px;
-  pointer-events: none;
-  user-select: none;
 }
 
 a {
@@ -91,15 +36,15 @@ a {
 }
 
 .caixa-pergunta {
-  background-color: #d19b6e;
+  background-color: #4D9334;
   border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 20px;
   padding-left: 20px;
   font-size: 15px;
-  width: 65%;
-  max-width: 850px;
+  min-width: 35vw;
+  max-width: 500px;
   color: white;
   margin: auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -116,11 +61,12 @@ legend {
 
 .respostas {
   flex-wrap: wrap;
-  background-color: #cf7e3c73;
+  border: 0;
+  background-color: #bfd582;
   display: flex;
   text-align: center;
   align-content: center;
-  width: 30vw;
+  min-width: 35vw;
   max-width: 500px;
   height: auto;
   margin: 15px;
@@ -128,12 +74,12 @@ legend {
   border-radius: 10px;
   cursor: pointer;
   font-size: 17px;
-  transition: box-shadow 0.3s, backgrond-color 0.3s;
+  transition: box-shadow 0.3s, backgrond-color 0.3s, filter 0.3s;
 }
 
 .respostas:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  background-color: #f1f1f1;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.325);
+  filter: brightness(95%);
 }
 
 .conjuntoRespostas {
@@ -159,52 +105,53 @@ legend {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #80af7c;
+  background-color: var(--cor-box-background);
   border-radius: 8px;
-  box-shadow: 5px 5px 10px #05582e;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.234);
+  margin-bottom: 80px;
 }
+
 #tituloPontuacao {
   text-align: center;
-  border-bottom: 1px solid #f6f6f6;
-  margin-bottom: 10px;
-  text-shadow: 8px 8px 8px #05582e;
 }
 .bioma {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #f6f6f6;
-  padding-bottom: 10px;
+  padding: 10px;
   flex: 1;
 }
+
+.bioma.centro {
+  border-bottom: 1px solid #969696;
+}
 .bioma img {
-  box-shadow: 5px 5px 10px #05582e;
-  max-width: 150px;
+  width: 150px;
+  height: 90px;
+  object-fit: cover;
   margin-right: 20px;
-  border: 4px solid #05582e;
   border-radius: 8px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.234);
 }
 .bioma-details {
   flex: 1;
 }
 .bioma-details h2 {
   margin: 0;
-  font-size: 1.2em;
-  text-shadow: 8px 8px 8px #05582e;
+  font-size: 1.1em;
 }
 .bioma-details p {
   margin: 5px 0;
-  text-shadow: 8px 8px 8px #05582e;
 }
-@media (max-width: 768px) {
+#tituloPontuacao {
+    font-size: 1.7em;
+}
 
-}
 @media (max-width: 480px) {
   body {
       margin: 10px;
   }
-  h1 {
-      font-size: 1.5em;
+  #tituloPontuacao {
+      font-size: 1.6em;
   }
   .bioma-details h2 {
       font-size: 1em;
@@ -216,7 +163,13 @@ legend {
 /*fim pontuação*/
 
 
-@media (max-width: 720px) {
+@media (max-width: 920px) {
+  .container {
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   .conjuntoRespostas, .pergunta {
     display: flex;
     align-items: center;
@@ -224,7 +177,13 @@ legend {
     flex-direction: column;
     
   }
-
+  
+.bioma {
+  display: flex;
+  align-items: center;  
+  padding: 10px;
+  flex: 1;
+}
   .cima {
     margin-top: 10px;
   }
@@ -234,10 +193,8 @@ legend {
   }
 
   .respostas, .caixa-pergunta {
-    width: 75%;
-  }
-
-  .pergunta {
-    width: 100%; 
+    width: 80vw;
+    text-wrap: wrap;
+    margin: 10px;
   }
 }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel='stylesheet' href='../source/css/global.css'></link>
+    <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+ 
+ 
+
+
+<body>
+    <!-- Começo dos elementos do Header -->
+    <header>
+      <div class="partesHeader">
+        <img class="logo" alt="Logo do site" src="../img/logo.svg" />
+        <h1 class="title">Blog Informática</h1>
+      </div>
+      <div class="partesHeader headerDireita">
+        <a class="buttonHeader" href="../">Página Inicial</a>
+        <a class="buttonHeader" href="../projetos/">Projetos</a>
+        <a class="buttonHeader" href="../mapa-interativo/">Mapa Interativo</a>
+        <a class="buttonHeader" href="../quiz/">Quiz</a>
+        <a class="buttonHeader" href="../noticias/todas/">Notícias</a>
+
+        <button id="buttonMenu" class="buttonMenu" onclick="dropdown()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <div id="menuHeader" class="menuHeader">
+      <div class="menuConteudo">
+        <a href="../">Página Inicial</a>
+        <a href="../projetos/">Projetos</a>
+        <a href="../mapa-interativo/">Mapa Interativo</a>
+        <a href="../quiz/">Quiz</a>
+        <a href="../noticias/todas/">Notícias</a>
+      </div>
+    </div>
+    <!-- Fim dos elementos do Header -->
+
+    <!-- Começo do modal -->
+    <div class="modal" id="modalExpandir" style="display: none">
+      <div class="conteudoModal">
+        <button class="close buttonStyle" onclick="fecharModal(this)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h1 id="title"></h1>
+        <p class="text"></p>
+      </div>
+    </div>
+    <!-- Fim do modal -->
+
+    <!-- Começo chatbot -->
+    <button class="btChatbot" onclick="abrirChatbot()">
+      <i class="fa-solid fa-robot"></i>
+    </button>
+    <div class="chatbot hide" id="chatbot">
+      <div class="topoChat">
+        <button class="expandirChat" onclick="expandirChat(this)">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </button>
+        <h2>ChatBot</h2>
+      </div>
+
+      <button class="close buttonStyle" onclick="fecharChatBot()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="caixaMensagensChatbot"></div>
+
+      <div class="inputMensagem">
+        <input
+          type="text"
+          id="inputText"
+          placeholder="Escreva sua mensagem..."
+        />
+        <button class="enviarMensagem">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Fim chatbot -->
+
+<div class="quiz" id="quiz">
+    <div id="pergunta">
+        <div class="caixa-pergunta">
+            <h3 id="question">PERGUNTA</h3>
+        </div>
+    </div>
+        <legend id='introducao'></legend>
+    <div class="conjuntoRespostas cima">
+        <input type="button" class="respostas" id="letraA">
+        <input type="button" class="respostas" id="letraB">
+    </div>
+    <div class="conjuntoRespostas baixo">
+        <input type="button" class="respostas" id="letraC">
+        <input type="button" class="respostas" id="letraD">
+    </div>
+
+    </div>
+    <audio id="audioAcertoid">
+        <source src="audioacerto.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioErroid">
+        <source src="audioerro.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audioTerminoid">
+        <source src="termino.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <div id="pontuacaoFinal">
+        <div class="container">
+            <h1 id="tituloPontuacao">Ranking de Acertos</h1>
+            <!-- Bioma 1 -->
+            <div class="bioma centro">
+                <img src="img/amazonia.jpg" alt="Bioma 1">
+                <div class="bioma-details">
+                    <h2>Bioma Amazônico</h2>
+                    <p id="amazoniaAcertos"></p>
+                </div>
+            </div>
+            <!-- Bioma 2 -->
+            <div class="bioma centro">
+                <img src="img/cerrado.webp" alt="Bioma 2">
+                <div class="bioma-details">
+                    <h2>Bioma Cerrado</h2>
+                    <p id="cerradoAcertos"></p>
+                </div>
+            </div>
+            <div class="bioma centro">
+                    <img src="img/caatinga.jpg" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Caatinga</h2>
+                        <p id="caatingaAcertos"></p>
+                    </div>
+            </div>
+            <div class="bioma centro">
+                    <img src="img/mata-atlantica.webp" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Mata Atlântica</h2>
+                        <p id="mataAcertos"></p>
+                    </div>
+            </div>
+            <div class="bioma centro">
+                    <img src="img/pampa.webp" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Pampa</h2>
+                        <p id="pampaAcertos"></p>
+                    </div>
+            </div>
+            <div class="bioma">
+                    <img src="img/pantanal.jpg" alt="Bioma 2">
+                    <div class="bioma-details">
+                        <h2>Bioma Pantanal</h2>
+                        <p id="pantanalAcertos"></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src='QuizBiomas.js'></script>
+    <script src='../source/global.js'></script>
+</body>
+</html>

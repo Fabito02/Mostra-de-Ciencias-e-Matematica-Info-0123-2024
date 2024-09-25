@@ -239,10 +239,10 @@ function mudarCoresIncorretasVermelho(){
     }
 }
 function mudarCoresNormal(){
-    botaoA.style.backgroundColor = '#cf7e3c73'
-    botaoB.style.backgroundColor = '#cf7e3c73';
-    botaoC.style.backgroundColor = '#cf7e3c73';
-    botaoD.style.backgroundColor = '#cf7e3c73';
+    botaoA.style.backgroundColor = '#bfd582'
+    botaoB.style.backgroundColor = '#bfd582';
+    botaoC.style.backgroundColor = '#bfd582';
+    botaoD.style.backgroundColor = '#bfd582';
 }
 
 let botaoB = document.getElementById('letraB');
@@ -297,7 +297,7 @@ document.getElementById('letraB').addEventListener('click', function(){
             biomaReferente(questaoB, vetorComparar);
             setTimeout(() => {
                 mudarCoresNormal()
-                botaoB.style.backgroundColor = '#cf7e3c73';
+                botaoB.style.backgroundColor = '#bfd582';
             }, 1500);
         } else {
             mudarCoresIncorretasVermelho()
@@ -329,7 +329,7 @@ document.getElementById('letraC').addEventListener('click', function(){
             biomaReferente(questaoC, vetorComparar);
             setTimeout(() => {
                 mudarCoresNormal()
-                botaoC.style.backgroundColor = '#cf7e3c73';
+                botaoC.style.backgroundColor = '#bfd582';
             }, 1500);
         } else {
             mudarCoresIncorretasVermelho()
