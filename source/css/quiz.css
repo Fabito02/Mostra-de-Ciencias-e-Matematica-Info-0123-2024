@@ -106,7 +106,7 @@ legend {
   margin: 0 auto;
   padding: 20px;
   background-color: var(--cor-box-background);
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.234);
   margin-bottom: 80px;
 }
