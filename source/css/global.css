@@ -121,7 +121,7 @@ header .buttonHeader::after {
   margin-bottom: 10px;
   border-radius: 8px;
   padding: 10px;
-  background-color: #bdbdbdc7;
+  background-color: #d4d4d4;
   width: calc(100% - 20px);
   text-decoration: none;
   color: #000;
