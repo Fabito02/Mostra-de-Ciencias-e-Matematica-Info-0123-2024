@@ -78,6 +78,17 @@ function openSumario(sumario) {
   }
 }
 
+function fecharSumario(sumario) {
+  if (sumario.parentElement.classList.contains("active") === true) {
+    sumario.parentElement.classList.remove("active");
+  } else {
+    let allTopics = document.querySelectorAll(".sumario");
+    allTopics.forEach(function (elemento) {
+      elemento.classList.remove("active");
+    });
+  }
+}
+
 // Função para fechar elemento flutuante
 function fecharCaixasFlutuantes(e) {
   e.classList.add("hide");
@@ -108,9 +119,17 @@ function fecharBarraLateral() {
 }
 
 function abrirBarraLateral() {
-  document
-    .querySelector(".barraLateral")
-    .classList.remove("barraLateralFechada");
+  // Verifica se a largura da tela é menor ou igual a 920px
+  if (window.innerWidth <= 920) {
+    document
+      .querySelector(".barraLateral")
+      .classList.remove("barraLateralFechada");
+
+    const corpoSumario = document.getElementsByClassName('corpoSumario')[0];
+    if (corpoSumario) {
+      fecharSumario(corpoSumario);
+    }
+  }
 }
 
 window.onclick = function (event) {

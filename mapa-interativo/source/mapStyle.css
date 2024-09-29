@@ -804,6 +804,7 @@ body {
     height: 100vh;
     background-color: #bdbdbdc7;
     width: 100vw;
+    max-width: 600px;
     top: 0;
     left: 0;
     position: fixed;
