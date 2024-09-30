@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
               .catch((error) => {
                 console.error("Erro:", error);
                 elementoFlutuante.querySelector("#clima").innerHTML =
-                  '<p style="color: red">erro ao obter o clima!</p>';
+                  '<p style="color: red; font-size: 14px; transform: translateX(-20px)">Erro ao obter o clima!<br>Sem conexão</p>';
               });
           } else {
             elementoFlutuante.querySelector("#clima").innerHTML = "";
