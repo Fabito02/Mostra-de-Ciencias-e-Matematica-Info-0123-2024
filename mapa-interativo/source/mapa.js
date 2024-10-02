@@ -15,12 +15,11 @@ const panzoom2 = Panzoom(mapa2, {
   pinchToZoom: true,
 });
 
-panzoom1.zoom(0.65, { 
-  animate: true, 
+panzoom1.zoom(0.65, {
+  animate: true,
   duration: 1500,
-  easing: "cubic-bezier(0.3, 2.5, 0.6, 1)" 
+  easing: "cubic-bezier(0.3, 2.5, 0.6, 1)",
 });
-
 
 // controles de zoom com rotação do mouse
 mapa1.addEventListener("wheel", (event) => {
@@ -125,7 +124,7 @@ function abrirBarraLateral() {
       .querySelector(".barraLateral")
       .classList.remove("barraLateralFechada");
 
-    const corpoSumario = document.getElementsByClassName('corpoSumario')[0];
+    const corpoSumario = document.getElementsByClassName("corpoSumario")[0];
     if (corpoSumario) {
       fecharSumario(corpoSumario);
     }
@@ -164,3 +163,63 @@ function toggleMapa() {
 
   pill.classList.toggle("active");
 }
+
+var iconesData = {}
+
+function carregarIconesDescricao() {
+  return fetch("source/descricao_icone.json")
+    .then((response) => response.json())
+    .then((dados) => {
+      iconesData = dados;
+    })
+    .catch((error) => {
+      console.error("Erro ao carregar dados de icones:", error);
+    });
+}
+
+carregarIconesDescricao()
+
+document.addEventListener("DOMContentLoaded", function() {
+  const elementoFlutuanteIconeSumario = document.getElementById("elementoFlutuanteIconeSumario");
+
+  // Seleciona todos os ícones com a classe "iconeSumario"
+  var icones = document.querySelectorAll(".iconeSumario");
+
+  icones.forEach((icone) => {
+    // Eventos para desktop (mouse)
+    icone.addEventListener("mouseenter", function () {
+      let nome = this.querySelector('span').innerHTML.trim();
+      let descricao = iconesData[nome];
+      elementoFlutuanteIconeSumario.innerHTML = descricao;
+      elementoFlutuanteIconeSumario.classList.add("show");
+    });
+
+    icone.addEventListener("mouseleave", function () {
+      elementoFlutuanteIconeSumario.classList.remove("show");
+    });
+
+    // Eventos para mobile (toque)
+    icone.addEventListener("touchstart", function (e) {
+      let nome = this.querySelector('span').innerHTML.trim();
+      let descricao = iconesData[nome];
+      elementoFlutuanteIconeSumario.innerHTML = descricao;
+      elementoFlutuanteIconeSumario.classList.add("show");
+
+      // Atualiza a posição no toque
+      elementoFlutuanteIconeSumario.style.left = `${e.touches[0].pageX + 10}px`;
+      elementoFlutuanteIconeSumario.style.top = `${e.touches[0].pageY - 30}px`;
+    });
+
+    icone.addEventListener("touchend", function () {
+      elementoFlutuanteIconeSumario.classList.remove("show");
+    });
+
+    // Atualiza a posição do elemento flutuante no movimento do mouse
+    icone.addEventListener("mousemove", function (e) {
+      if (elementoFlutuanteIconeSumario.classList.contains("show")) {
+        elementoFlutuanteIconeSumario.style.left = `${e.pageX + 10}px`;
+        elementoFlutuanteIconeSumario.style.top = `${e.pageY - 30}px`;
+      }
+    });
+  });
+});
