@@ -215,7 +215,7 @@ document.addEventListener("mouseenter", function(e) {
       // Atualizar a posição do elemento flutuante de acordo com o movimento do mouse
       icone.addEventListener("mousemove", (e) => {
         if (elementoFlutuanteIconeSumario.classList.contains("show")) {
-          elementoFlutuanteIconeSumario.style.left = `${e.pageX + 10}px`;
+          elementoFlutuanteIconeSumario.style.left = `${e.pageX + 0}px`;
           elementoFlutuanteIconeSumario.style.top = `${e.pageY - 30}px`;
         }
       });
