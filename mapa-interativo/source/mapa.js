@@ -205,7 +205,7 @@ document.addEventListener("mouseenter", function(e) {
         elementoFlutuanteIconeSumario.classList.add("show");
   
         elementoFlutuanteIconeSumario.style.left = `${e.touches[0].pageX + 10}px`;
-        elementoFlutuanteIconeSumario.style.top = `${e.touches[0].pageY - 30}px`;
+        elementoFlutuanteIconeSumario.style.bottom = `${e.touches[0].pageY - 30}px`;
       });
   
       icone.addEventListener("touchend", function () {
@@ -216,9 +216,9 @@ document.addEventListener("mouseenter", function(e) {
       icone.addEventListener("mousemove", (e) => {
         if (elementoFlutuanteIconeSumario.classList.contains("show")) {
           elementoFlutuanteIconeSumario.style.left = `${e.pageX + 10}px`;
-          elementoFlutuanteIconeSumario.style.top = `${e.pageY + -30}px`;
+          elementoFlutuanteIconeSumario.style.top = `${e.pageY - 30}px`;
         }
       });
-    });
+    }, { once: true });
   }
 }, true)

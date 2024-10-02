@@ -219,14 +219,15 @@ function abrirCaixasFlutuantesEstados() {
         if (city) {
           getClima(city)
             .then((data) => {
+              var descricaoClima = data.current.condition.text
               const iconUrl = data.current.condition.icon;
-              const clima = `<img src="${iconUrl}" alt="Ícone do clima atual" class="iconClima icon"> <marquee scrollamount="5" class="textoElementoFlutuante textoClima">${data.current.temp_c}°C, ${data.current.condition.text} - ${city}</marquee>`;
+              const clima = `<img src="${iconUrl}" alt="Ícone do clima atual" class="iconClima icon" id="iconClima"> <marquee scrollamount="5" class="textoElementoFlutuante textoClima">${data.current.temp_c}°C, ${data.current.condition.text} - ${city}</marquee>`;
               informacoesBase.querySelector("#clima").innerHTML = clima;
             })
             .catch((error) => {
               console.error("Erro:", error);
               informacoesBase.querySelector("#clima").innerHTML =
-                '<p style="color: red">erro ao obter o clima!</p>';
+              '<p style="color: red; font-size: 14px; transform: translateX(-20px)">Erro ao obter o clima!<br>Sem conexão</p>';
             });
         } else {
           informacoesBase.querySelector("#clima").innerHTML = "";
