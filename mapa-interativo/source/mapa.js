@@ -204,8 +204,8 @@ document.addEventListener("mouseenter", function(e) {
         elementoFlutuanteIconeSumario.innerHTML = descricao;
         elementoFlutuanteIconeSumario.classList.add("show");
   
-        elementoFlutuanteIconeSumario.style.left = `${e.touches[0].pageX + 10}px`;
-        elementoFlutuanteIconeSumario.style.bottom = `${e.touches[0].pageY - 30}px`;
+        elementoFlutuanteIconeSumario.style.left = `${e.touches[0].pageX}px`;
+        elementoFlutuanteIconeSumario.style.bottom = `${e.touches[0].pageY}px`;
       });
   
       icone.addEventListener("touchend", function () {
