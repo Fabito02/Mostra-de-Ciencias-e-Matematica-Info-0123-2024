@@ -179,47 +179,46 @@ function carregarIconesDescricao() {
 
 carregarIconesDescricao()
 
-document.addEventListener("DOMContentLoaded", function() {
-  const elementoFlutuanteIconeSumario = document.getElementById("elementoFlutuanteIconeSumario");
+document.addEventListener("mouseenter", function(e) {
+  if (e.target.classList && e.target.classList.contains('iconeSumario')) {// seleciona o elemento flutuante
+    const elementoFlutuanteIconeSumario = document.getElementById("elementoFlutuanteIconeSumario");
+    
+    // seleciona todos os ícones com a classe "iconeSumario"
+    var icones = document.querySelectorAll(".iconeSumario");
+    
+    icones.forEach((icone) => {
+      icone.addEventListener("mouseenter", function () {
+        let nome = this.querySelector('span').innerHTML.trim()
+        let descricao = iconesData[nome]
+        elementoFlutuanteIconeSumario.innerHTML = descricao
+        elementoFlutuanteIconeSumario.classList.add("show");
+      });
+    
+      icone.addEventListener("mouseleave", function () {
+        elementoFlutuanteIconeSumario.classList.remove("show");
+      });
 
-  // Seleciona todos os ícones com a classe "iconeSumario"
-  var icones = document.querySelectorAll(".iconeSumario");
-
-  icones.forEach((icone) => {
-    // Eventos para desktop (mouse)
-    icone.addEventListener("mouseenter", function () {
-      let nome = this.querySelector('span').innerHTML.trim();
-      let descricao = iconesData[nome];
-      elementoFlutuanteIconeSumario.innerHTML = descricao;
-      elementoFlutuanteIconeSumario.classList.add("show");
+      icone.addEventListener("touchstart", function (e) {
+        let nome = this.querySelector('span').innerHTML.trim();
+        let descricao = iconesData[nome];
+        elementoFlutuanteIconeSumario.innerHTML = descricao;
+        elementoFlutuanteIconeSumario.classList.add("show");
+  
+        elementoFlutuanteIconeSumario.style.left = `${e.touches[0].pageX + 10}px`;
+        elementoFlutuanteIconeSumario.style.top = `${e.touches[0].pageY - 30}px`;
+      });
+  
+      icone.addEventListener("touchend", function () {
+        elementoFlutuanteIconeSumario.classList.remove("show");
+      });
+    
+      // Atualizar a posição do elemento flutuante de acordo com o movimento do mouse
+      icone.addEventListener("mousemove", (e) => {
+        if (elementoFlutuanteIconeSumario.classList.contains("show")) {
+          elementoFlutuanteIconeSumario.style.left = `${e.pageX + 10}px`;
+          elementoFlutuanteIconeSumario.style.top = `${e.pageY + -30}px`;
+        }
+      });
     });
-
-    icone.addEventListener("mouseleave", function () {
-      elementoFlutuanteIconeSumario.classList.remove("show");
-    });
-
-    // Eventos para mobile (toque)
-    icone.addEventListener("touchstart", function (e) {
-      let nome = this.querySelector('span').innerHTML.trim();
-      let descricao = iconesData[nome];
-      elementoFlutuanteIconeSumario.innerHTML = descricao;
-      elementoFlutuanteIconeSumario.classList.add("show");
-
-      // Atualiza a posição no toque
-      elementoFlutuanteIconeSumario.style.left = `${e.touches[0].pageX + 10}px`;
-      elementoFlutuanteIconeSumario.style.top = `${e.touches[0].pageY - 30}px`;
-    });
-
-    icone.addEventListener("touchend", function () {
-      elementoFlutuanteIconeSumario.classList.remove("show");
-    });
-
-    // Atualiza a posição do elemento flutuante no movimento do mouse
-    icone.addEventListener("mousemove", function (e) {
-      if (elementoFlutuanteIconeSumario.classList.contains("show")) {
-        elementoFlutuanteIconeSumario.style.left = `${e.pageX + 10}px`;
-        elementoFlutuanteIconeSumario.style.top = `${e.pageY - 30}px`;
-      }
-    });
-  });
-});
+  }
+}, true)

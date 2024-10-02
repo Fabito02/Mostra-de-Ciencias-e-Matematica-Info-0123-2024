@@ -120,7 +120,6 @@ body {
   left: calc(50% - 40px);
   z-index: 1;
   backdrop-filter: blur(15px);
-  border-color: #cdcdcd91;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.213);
 }
 
@@ -214,7 +213,7 @@ body {
   padding-right: 15px;
   overflow-y: auto;
   border-radius: 8px;
-  background-color: #d7d7d770;
+  background-color: #c5c5c565;
   margin: 10px;
   height: calc(100% - 20px);
   transition: height 0.2s ease-out;
@@ -345,7 +344,7 @@ body {
   padding-right: 15px;
   overflow-y: auto;
   border-radius: 8px;
-  background-color: #d7d7d770;
+  background-color: #c5c5c565;
   height: 0px;
   transition: height 0.2s ease-out;
 }
@@ -575,7 +574,7 @@ body {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background-color: #d7d7d770;
+  background-color: #c5c5c565;
 }
 
 .bloco {
@@ -669,7 +668,8 @@ body {
   z-index: 10;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.199);
   backdrop-filter: blur(5px);
-  transition: transform 0.2s ease-out, visibility 0.2s ease-out, font-size 0.2s ease-out;
+  transition: transform 0.2s ease-out, visibility 0.2s ease-out,
+    font-size 0.2s ease-out;
 }
 .elementoFlutuanteIconeSumario.show {
   font-size: 14px;
@@ -826,7 +826,7 @@ body {
     padding: 10px;
     padding-top: 70px;
     overflow: scroll;
-    z-index: 100;
+    z-index: 5;
     height: 100vh;
     background-color: #bdbdbdc7;
     width: 100vw;
@@ -901,7 +901,8 @@ body {
     padding: 15px;
     margin: 0;
     height: auto;
-    transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+    transition: height 0.25s ease-in-out, margin-top 0.25s ease-in-out,
+      margin-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
   }
 
   .topico.active .conteudoTopico {
