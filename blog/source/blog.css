@@ -180,4 +180,8 @@ footer {
     .creditosAutorMateria {
         width: calc(100% - 50px);
     }
+    
+    .info {
+        width: calc(auto - 20px);
+    }
 }
