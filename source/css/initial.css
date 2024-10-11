@@ -1,0 +1,86 @@
+h2{
+    font-size: 18px;
+    font-weight: 750;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    padding: 20px;
+}
+
+.large-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image.large {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    width: calc(100vw - 60px);
+    max-width: 600px;
+    background-color: #d3d3d3;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.float{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -30px;
+    z-index: 1;
+    position: relative;
+    width: 350px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.float p{
+    margin: 7px;
+    font-size: 14px;
+}
+
+.mediumCards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.medium-card {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.image.small {
+    height: 100px;
+    width: 100px;
+    min-width: 100px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+}
+
+.texto {
+    margin: 10px;
+    text-align: center;
+    font-size: 1.075em;
+}
