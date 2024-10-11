@@ -131,6 +131,7 @@ footer {
 
 @media (max-width: 920px) {
     body {
+        column-gap: unset;
         grid-template: auto;
         grid-template-columns: 100vw;
     }
