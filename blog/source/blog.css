@@ -160,4 +160,24 @@ footer {
         border-radius: 12px;
         width: calc(100% - 80px);
     }
+
+    .imgMateria {
+        width: calc(100% - 50px);
+    }
+    
+    .tituloMateria {
+        width: calc(100% - 50px);
+    }
+    
+    .descricaoImagemMateria {
+        width: calc(100% - 50px);
+    }
+    
+    .conteudoMateria {
+        width: calc(100% - 50px);
+    }
+    
+    .creditosAutorMateria {
+        width: calc(100% - 50px);
+    }
 }
