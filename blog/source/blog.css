@@ -132,7 +132,7 @@ footer {
 @media (max-width: 920px) {
     body {
         grid-template: auto;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100vw;
     }
 
     header {
@@ -159,13 +159,5 @@ footer {
         margin-right: unset;
         border-radius: 12px;
         width: calc(100% - 80px);
-    }
-
-    .todasAsMaterias .titulo {
-        width: calc(100% - 140px);
-    }
-    
-    .itemMateria {
-        width: calc(100% - 180px);
     }
 }
