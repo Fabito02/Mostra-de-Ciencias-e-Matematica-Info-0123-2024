@@ -25,6 +25,22 @@ header {
     grid-column: 1 / 4;
 }
 
+#materiaNaoAberta {
+    font-size: 22px;
+    color: #5b5b5b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    grid-column: 1 / 4;
+}
+
+#materiaNaoAberta .material-symbols-rounded {
+    font-size: 100px;
+    margin-bottom: 15px;
+}
+
 .itemMateria {
     margin-right: 20px;
     border-radius: 12px;

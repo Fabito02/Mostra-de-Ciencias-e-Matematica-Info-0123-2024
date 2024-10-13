@@ -80,27 +80,23 @@
     </div>
     <!-- Fim chatbot -->
 
-    <div class="materia">
-      <div class="tituloMateria">
-        Amazônia: O pulmão do mundo está em perigo, que está em jogo?
-      <div class="dataMateria">00/00/0000</div>
+    <div id="materiaNaoAberta">
+      <span class="material-symbols-rounded">receipt_long_off</span>
+      Nenhuma matéria aberta.
     </div>
-      <img src="../img/imagemTestes.jpg" alt="" class="imgMateria">
-      <div class="descricaoImagemMateria">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem dicta dolorum cum facilis iure doloremque sapiente dignissimos unde?</div>
+
+    <div class="materia" id="materia">
+      <div class="tituloMateria">
+    </div>
+      <img src="" alt="" class="imgMateria">
+      <div class="descricaoImagemMateria"></div>
       <div class="conteudoMateria">
-        Sendo considerado o bioma com maior biodiversidade do planeta, a Amazônia tem cerca de 6,9 milhões de km2, e não reside exclusivamente no Brasil, adentrando partes de outros países como: Bolívia, Colômbia, Equador, Guiana, Peru, Venezuela e Suriname. Sendo um bioma tão extenso, ele ocupa cerca de 47% do território brasileiro, e consequentemente é muito explorado e devastado pela ação humana, e nos últimos 50 anos teve cerca de 17% de seu território devastado.
- 	A vegetação da Amazônia pode ser dividida em três categorias: Mata de terra firme, mata de várzea e mata de igapó. Cada uma tem características específicas as tornando únicas e especiais, mas a característica comum entre todas e o clima, equatorial úmido, a mata de terra firme e caracterizada por ocorrer em áreas não sujeitas a inundações e apresentam uma grande variedade de fitofisionomias (florestas densas, florestas semi-abertas com babaçu, florestas secas com palmeiras, florestas secas com cipós, entre outras). São predominantes as formações com árvores altas (mais de 25 m de altura), copa fechada, sub-bosque aberto e elevada biomassa, além de representar 80% do bioma amazônico. A mata várzea é uma mata de inundação temporária e de composição vegetal bem variável, já que é influenciada pela constante vazão dos rios, sendo assim depende da entrada e saída de água das marés fluviais. A mata de Igapó e caracterizada por passar a maior parte do ano inundada (cerca de 10 meses, dependendo da região ), e ocupa 8% do território amazônico, tem solo pobre em nutrientes pois tem água escura e ácida, o teor de substâncias inorgânicas dissolvidas é baixo.
-	Algumas pesquisas já foram feitas na Amazônia chegando à conclusão que lá existem cerca de 14.003 espécies de plantas que se dividem em árvores, ervas, arbustos, lianas e trepadeiras, tendo grande poder econômico e medicinal, se usadas da maneira correta, uma planta muito comum a esse bioma e a vitória régia, castanheira, palmeira e mogno. Tendo a maior biodiversidade do planeta tem também uma fauna riquíssima, tendo em média 30 milhões de espécies vivendo lá, e grande parte ainda é desconhecida, alguns animais comuns desse bioma são: o tucano, a onça, o macaco e a arara, entre muitos outros.
-	Mas se tratando de coisa séria o bioma Amazônico tem sido fortemente violentado, majoritariamente pela ação humana, coisas como: O desmatamento, as queimadas, a garimpagem, o agropastoreio e a biopirataria são hoje os maiores problemas enfrentados na amazônia. Como foi dito no artigo sobre o bioma amazônico publicado pelo Instituto Federal Brasil Florestal, “ O conjunto formado por essas ações devastadoras é responsável por graves mudanças climáticas em todo o planeta, como o aquecimento global. A Amazônia é considerada  um grande “resfriador” atmosférico e como maior abrigo da biodiversidade do mundo." 
-	O garimpo ilegal pejudica alem do meio ambiente erca de 17 povos indigenas, que sao nativos da regiao, pois violam seus territorios e ameaçam sua população, ja que muitas vezes os indigenas são mortos tentando defender seu territorio. De acordo com os pesquisadores, outras 122 TIs foram alcançadas pelas águas dos rios onde o garimpo utiliza substâncias como o mercúrio, usado para separar o ouro de outros sedimentos, somando 139 povos originários, que sentem as consequências de rios assoreados por excesso de sedimentos, da morte de animais e da contaminação da água e da vegetação. Tem sido desenvolvido métodos para reverter essa poluição, mas dependemos totalmente das autoridades dos países por onde passa a Amazônia. 
- 	As queimadas tem sido o maior problema enfrentado esse ano (2024), atingindo não só a amazônia como o cerrado e o pantanal, causados majoritariamente pela ação humana, para a “renovação” do pasto, garimpo e avanço do desmatamento, os impactos tem sido imenso para fauna e flora nativa, além de aumentar muito o efeito estufa, e vilar o equilíbrio climático, já que a amazônia representa uma forma de resfriamento do planeta, as queimadas põe em risco a biodiversidade pondo em chance de extinção espécies que só existem na amazônia, as queimadas e devastação podem ocasionar num efeito dominó que impactará todo o ecossistema. 
-Chega de coisas ruins vamos falar agora sobre algumas curiosidades e fatos sobre a amazônia. Na Amazônia existem botos, de duas espécies, o boto-cor-de-rosa, e o boto-preto, também conhecidos como golfinhos de água doce, que também são ameaçados de extinção pelo garimpo. Nos rios da amazônia concentram 85% dos peixes da América do Sul. A Amazônia abriga cerca de 357 comunidades remanescentes de quilombos e mais ou menos 180 povos indígenas, totalizando 208 mil pessoas. 
       </div>
       <div class="creditosAutorMateria">
-        <img src="../img/imagemTestes.jpg" alt="" class="imgAutor">
+        <img src="" alt="" class="imgAutor">
         <div class="info">
-          <div class="nome">Catarina Rocha Bandeira</div>
-          <div class="minibio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit suscipit aliquid reiciendis quasi</div>
+          <div class="nome"></div>
+          <div class="minibio"></div>
         </div>
       </div>
     </div>
@@ -109,27 +105,27 @@ Chega de coisas ruins vamos falar agora sobre algumas curiosidades e fatos sobre
 
       <h2 class="titulo">Matérias Disponíveis</h2>
 
-      <div class="itemMateria" code="1">
+      <div class="itemMateria" onclick="carregarMateria(this)" code="1">
         <p class="titulo">Amazônia: O pulmão do mundo está em perigo, que está em jogo?</p>
       </div>
 
-      <div class="itemMateria" code="2">
+      <div class="itemMateria" onclick="carregarMateria(this)" code="2">
         <p class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque laboriosam libero incidunt.</p>
       </div>
 
-      <div class="itemMateria" code="3">
+      <div class="itemMateria" onclick="carregarMateria(this)" code="3">
         <p class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque laboriosam libero incidunt.</p>
       </div>
 
-      <div class="itemMateria" code="4">
+      <div class="itemMateria" onclick="carregarMateria(this)" code="4">
         <p class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque laboriosam libero incidunt.</p>
       </div>
 
-      <div class="itemMateria" code="5">
+      <div class="itemMateria" onclick="carregarMateria(this)" code="5">
         <p class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque laboriosam libero incidunt.</p>
       </div>
 
-      <div class="itemMateria" code="6">
+      <div class="itemMateria" onclick="carregarMateria(this)" code="6">
         <p class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque laboriosam libero incidunt.</p>
       </div>
     </div>
