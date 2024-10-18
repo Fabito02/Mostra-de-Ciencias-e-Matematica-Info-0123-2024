@@ -367,10 +367,10 @@ function mudarCoresIncorretasVermelho() {
     }
 }
 function mudarCoresNormal() {
-    botaoA.style.backgroundColor = '#c6d798'
-    botaoB.style.backgroundColor = '#c6d798';
-    botaoC.style.backgroundColor = '#c6d798';
-    botaoD.style.backgroundColor = '#c6d798';
+    botaoA.style.backgroundColor = '';
+    botaoB.style.backgroundColor = '';
+    botaoC.style.backgroundColor = '';
+    botaoD.style.backgroundColor = '';
 }
 
 let botaoB = document.getElementById('letraB');

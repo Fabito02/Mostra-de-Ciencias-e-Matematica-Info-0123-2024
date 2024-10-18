@@ -3,6 +3,7 @@ body {
     grid-template: auto auto auto auto auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 10px;
+    padding-top: 120px;
 }
 
 header {

@@ -1,6 +1,5 @@
 @import url("projetos.css");
 @import url("noticias.css");
-@import url("initial.css");
 @import url("quiz.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
@@ -16,7 +15,6 @@
 }
 
 body {
-  padding-top: 100px;
   font-family: "Inter", sans-serif;
   margin: 0;
   background-color: var(--cor-background);
