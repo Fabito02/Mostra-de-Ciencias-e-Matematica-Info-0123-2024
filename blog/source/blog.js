@@ -37,3 +37,8 @@ function carregarMateria(e) {
         materia.querySelector('.minibio').innerHTML = materiaData.minibio
     }
 }
+
+function fecharMateria() {
+  document.getElementById('materia').style.display = "none"
+  document.getElementById('materiaNaoAberta').style.display = "flex"
+}

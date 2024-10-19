@@ -60,3 +60,22 @@ function abrirChatbot() {
         chatbot.classList.add("hide");
     }
 }
+
+function voltarTopo() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function verificarScroll() {
+  const button = document.getElementById('voltarTopo');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.transform = "";
+  } else {
+    button.style.transform = "translateY(140px)";
+  }
+}
+
+verificarScroll()
+
+window.onscroll = function() {
+  verificarScroll();
+};

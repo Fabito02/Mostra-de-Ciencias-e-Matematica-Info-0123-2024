@@ -19,6 +19,7 @@ header {
 }
 
 .materia {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +87,7 @@ header {
 }
 
 .imgMateria {
-    border-radius: 10px;
+    border-radius: 12px;
     width: calc(100% - 100px);
 }
 
@@ -140,6 +141,14 @@ header {
 
 .info .nome {
     font-weight: 600;
+}
+
+#materiabtn {
+    right: 4%;
+}
+
+#materiabtn::before {
+    content: 'Fechar Matéria';
 }
 
 footer {
