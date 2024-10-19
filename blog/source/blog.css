@@ -118,16 +118,15 @@ header {
 
 .creditosAutorMateria {
     display: flex;
-    justify-content: space-between;
     height: 100px;
     width: calc(100% - 100px);
     margin-top: 80px;
 }
 
 .imgAutor {
-    border-radius: 5px;
+    border-radius: 14px;
     width: 100px;
-    height: 100px;
+    aspect-ratio: 4 / 4;
     object-fit: cover;
 }
 
