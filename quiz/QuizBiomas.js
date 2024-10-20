@@ -1,3 +1,5 @@
+window.onload = blurStatus()
+
 let pampas = {
     'Qual é a principal atividade econômica nos Pampas?': 'Pecuária',
     'Qual é a principal característica do solo nos Pampas?': 'Solo fértil com textura argilosa',
