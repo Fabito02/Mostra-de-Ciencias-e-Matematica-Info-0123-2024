@@ -52,5 +52,16 @@
         "linkFotoAutor":"img/autores/miguel.jpeg",
         "nomeAutor":"Miguel Lopes Chaves",
         "minibio":"Nativo de Almenara-MG, com 17 Anos de idade. Cursando Informática no IFNMG, Campus Almenara, 2° Ano."
+    },
+    
+    "6": {
+        "titulo":"Mata Atlântica: O Tesouro Verde do Brasil em Extinção.",
+        "data":"29/09/2024",
+        "linkImgMateria":"img/mata-atlantica.webp",
+        "descricaoImagemMateria":"Ararinha azul, espécie nativa da mata atlântica atualmente extinta da natureza e categorizada como “Criticamente em Perigo de Extinção” de acordo com a União Internacional para a Conservação da Natureza – UICN.",
+        "conteudoMateria":"<p>A <strong>Mata Atlântica</strong> é uma grande floresta tropical localizada predominantemente na costa do Brasil, mas também se encontra no <strong>Paraguai</strong> e <strong>Argentina</strong>. A Mata se estende do estado do <strong>Maranhão</strong> até o estado do <strong>Rio Grande do Sul</strong>, área essa, originalmente, ocupava <strong>1.3 milhões km²</strong>, mas, por ocasião da ação humana, resta apenas <strong>12%</strong> de toda essa extensão.</p> <p>Existe muita diversidade ecológica na Mata Atlântica, com riquíssimas espécies da fauna e flora. Exemplo disso são as <strong>onças pintadas</strong>, os <strong>micos-leões-dourados</strong>, <strong>araras</strong>, o famoso <strong>pau-brasil</strong> e diversas espécies de flora. No entanto, por ocasião da ação antrópica, essa diversidade tem se extinguido com o passar dos anos, e hoje, muitas correm risco de extinção.</p> <p>Essa variedade de fauna e flora é totalmente adaptada às condições climáticas e geográficas da floresta. O clima tropical e equatorial com grandes taxas de precipitação favorece que a umidade seja muito elevada nas regiões costeiras e, com isso, a temperatura é mais elevada. No entanto, nas regiões interioranas, as temperaturas tendem a ser mais frias. Entretanto, as condições climáticas do local atualmente estão implacáveis. As grandes queimadas nas épocas secas do ano destroem e destruíram boa parte de toda a diversidade natural.</p> <p>A exploração dos recursos naturais e a produção de recursos humanos é o grande impulso para esse desastre. Mas, muitas pessoas lutam para salvar toda biodiversidade tropical ameaçada e conscientizar os indivíduos e grandes indústrias a não prejudicar a natureza em prol do poder aquisitivo.</p> <p>A <strong>Mata Atlântica</strong> é de extrema importância para o Brasil, ela concentra cerca de <strong>20.000 espécies de plantas</strong>, nas quais algumas são endêmicas. Além disso, é o bioma mais alarmante em detrimento da biodiversidade local. Tudo isso deve levar a população brasileira a refletir e conscientizar sobre a importância da Mata em nosso país. Respeitar a fauna e flora presentes e viver em harmonia.</p>",
+        "linkFotoAutor":"img/autores/julio.jpeg",
+        "nomeAutor":"Julio César Rodrigues de Oliveira Santos",
+        "minibio":"Estudante do Instituto Federal do Norte de Minas Gerais - Campus Almenara."
     }
 }
