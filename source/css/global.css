@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
   height: 70px;
   z-index: 5;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   box-shadow: 0px 6px 8px 0px #00000015;
   position: fixed;
   top: 0;
@@ -88,7 +88,7 @@ header .buttonHeader::after {
   pointer-events: none;
   opacity: 0;
   transform: translateY(-10px);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   padding: 10px;
   padding-bottom: 0px;
   border-radius: 12px;
@@ -240,7 +240,7 @@ header .buttonHeader::after {
   background-color: #00000053;
   z-index: 1000;
   position: fixed;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
 }
 
 .conteudoModal {
@@ -297,7 +297,7 @@ header .buttonHeader::after {
   width: 42px;
   border-radius: 50%;
   background-color: #629151;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   z-index: 10;
   transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
@@ -325,7 +325,7 @@ header .buttonHeader::after {
   width: 42px;
   border-radius: 50%;
   background-color: #629151;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   z-index: 10;
   transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
@@ -353,7 +353,7 @@ header .buttonHeader::after {
   width: 42px;
   border-radius: 50%;
   background-color: #629151;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   z-index: 10;
   transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
@@ -373,7 +373,7 @@ header .buttonHeader::after {
   position: fixed;
   background-color: var(--cor-box-background);
   border-radius: 14px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(6px);
   height: 400px;
   width: 340px;
   bottom: 90px;

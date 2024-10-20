@@ -1,165 +1,165 @@
 main {
-    display: grid;
-    grid-template: auto auto auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 50px;
-    overflow-x: hidden; 
+  display: grid;
+  grid-template: auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 50px;
+  overflow-x: hidden;
 }
 
 header {
-    grid-column: 1 / 6;
+  grid-column: 1 / 6;
 }
 
 footer {
-    grid-column: 1 / 6;
+  grid-column: 1 / 6;
 }
 
 .largeBlock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column: 1 / 7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / 7;
 }
 
 .containerBanner {
-    grid-column: 1 / 7;
-    display: flex;
-    align-items: center;
+  grid-column: 1 / 7;
+  display: flex;
+  align-items: center;
 }
 
 .banner {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('/img/inicial/Banner.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/img/inicial/Banner.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .containerBanner .floatBlock {
-    max-width: 800px;
-    position: absolute;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    background-color: #e7f2c792;
-    padding: 25px;
-    right: 100px;
-    font-size: 1.25rem;
-    font-weight: 300;
-    text-align: right;
+  max-width: 800px;
+  position: absolute;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  background-color: #e7f2c792;
+  padding: 25px;
+  right: 100px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: right;
 }
 
 .containerBanner .floatBlock .title {
-    color: rgb(20, 74, 20);
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 30px;
-    font-family: "Gotu";
-    text-align: right;
+  color: rgb(20, 74, 20);
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-family: "Gotu";
+  text-align: right;
 }
 
 .containerBlocks {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    grid-column: 1 / 6;
-    min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-column: 1 / 6;
+  min-height: 800px;
 }
 
 .containerBlocks .block {
-    background-color: var(--cor-box-background);
-    width: 250px;
-    height: 440px;
-    padding: 30px;
-    border-radius: 30px;
-    margin: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    text-align: justify;
-    font-size: 1.15rem;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.101);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--cor-box-background);
+  width: 250px;
+  height: 440px;
+  padding: 30px;
+  border-radius: 30px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: justify;
+  font-size: 1.15rem;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.101);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .containerBlocks .block .titulo {
-    width: 100%;
+  width: 100%;
 }
 
 .containerBlocks .block img {
-    background-color: #d3f8c892;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover;
-    aspect-ratio: 4 / 4;
-    width: 100%;
+  background-color: #d3f8c892;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  aspect-ratio: 4 / 4;
+  width: 100%;
 }
 
 .containerBlocks .block:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.234);
-    transform: scale(1.03);
-    cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.234);
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .blocoComFloat {
-    position: relative;
-    display: flex;
-    grid-column: 1 / 2;
+  position: relative;
+  display: flex;
+  grid-column: 1 / 2;
 }
 
 .blocoComFloat img {
-    width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 1110px) {
-    .containerBlocks .block.center {
-        transform: scale(1.12);
-    }
-    
-    .containerBlocks .block.center:hover {
-        transform: scale(1.15);
-    }
+  .containerBlocks .block.center {
+    transform: scale(1.12);
+  }
+
+  .containerBlocks .block.center:hover {
+    transform: scale(1.15);
+  }
 }
 
 @media (max-width: 1500px) {
-    .containerBanner {
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .containerBanner .floatBlock {
-        max-width: 650px;
-        margin: 30px;
-        position: absolute;
-        right: 0;
-        font-size: 1.2rem;
-    }
-    
-    .containerBanner .floatBlock .title {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
-    }
+  .containerBanner {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerBanner .floatBlock {
+    max-width: 650px;
+    margin: 30px;
+    position: absolute;
+    right: 0;
+    font-size: 1.2rem;
+  }
+
+  .containerBanner .floatBlock .title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 920px) {
-    .containerBanner {
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .containerBanner .floatBlock {
-        max-width: 100vw;
-        margin: 30px;
-        position: absolute;
-        right: 0;
-        font-size: 1.1rem;
-        text-align: justify;
-    }
-    
-    .containerBanner .floatBlock .title {
-        font-size: 2.4rem;
-        margin-bottom: 20px;
-        text-align: left;
-    }
+  .containerBanner {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerBanner .floatBlock {
+    max-width: 100vw;
+    margin: 30px;
+    position: absolute;
+    right: 0;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  .containerBanner .floatBlock .title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
 }
