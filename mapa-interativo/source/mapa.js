@@ -1,3 +1,5 @@
+window.onload = blurStatus()
+
 //Script para o zoom no mapa usando a API Panzoom
 const mapa1 = document.getElementById("map1");
 const panzoom1 = Panzoom(mapa1, {
