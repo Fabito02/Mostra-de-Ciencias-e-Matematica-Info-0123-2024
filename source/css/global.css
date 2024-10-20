@@ -13,6 +13,14 @@
   --cor-texto: #000000;
 }
 
+a {
+  color: rgb(62, 153, 62);
+}
+
+a:visited {
+  color: rgb(62, 153, 62);
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -365,24 +373,186 @@ header .buttonHeader::after {
   transform: scale(0.9);
 }
 
+
+#chatIframe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 11;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+footer .blocoFooter {
+  font-size: 14px;
+  padding: 15px;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .blocoFooter p {
+  margin: 0;
+  color: #333;
+}
+
+footer .blocoFooter span {
+  margin: 10px 0;
+}
+
+footer .itemFooter {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #4f9734;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer i {
+  margin-right: 8px;
+  color: #555;
+}
+
+footer .redesSociais {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 920px) {
+  .conteudoModal .text {
+    padding: 20px;
+    width: calc(100% - 70px);
+  }
+
+  .menuHeader {
+    display: none !important;
+  }
+}
+
+@media (max-width: 920px) {
+
+  .partesHeader .title {
+    font-size: 1.4em;
+  }
+
+  .modal #title {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .buttonMenu {
+    display: block;
+  }
+
+  .buttonHeader {
+    display: none;
+  }
+
+  .conteudoModal .text {
+    font-size: 1em;
+  }
+  .conteudoModal {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .modal .close {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+
+
+/* Chatbot */
+
+.conteinerIconeChat,
+.conteinerIconeUsuario,
+.iconeImg, .icone {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  aspect-ratio: 4 / 4;
+}
+
+#icone {
+  width: 100%;
+  height: 100%;
+}
+
+.escolhaIcone {
+  font-size: 10px;
+  position: absolute;
+  align-self: center;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: calc(100% - 80px);
+  max-width: 300px;
+  padding: 20px;
+}
+
+.botaoIcones {
+  border: none;
+  border-radius: 90px;
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+  margin: 2px;
+  cursor: pointer;
+}
+.botaoIcones:hover {
+  transform: scale(1.1);
+}
+
+.iconeRobo {
+  height: 70px;
+  width: 70px;
+}
+.animacao3Pontos {
+  height: 30px;
+  width: 30px;
+  filter: brightness(50%);
+}
+
 .chatbot {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  z-index: 11;
-  position: fixed;
   background-color: var(--cor-box-background);
   border-radius: 14px;
   backdrop-filter: blur(6px);
   height: 400px;
   width: 340px;
-  bottom: 90px;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
-  right: 25px;
   transform: translateX(0);
-  transition: transform 0.3s ease, width 0.35s ease-in-out,
-    height 0.35s ease-in-out;
+  transition: transform 0.3s ease, width 0.35s ease-in-out, height 0.35s ease-in-out;
   padding-top: 40px;
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 11;
 }
 
 .chatbot.hide {
@@ -399,9 +569,10 @@ header .buttonHeader::after {
   height: 55px;
   border-radius: 0px 0px 14px 14px;
   background-color: #7b7b7b47;
+  transform: translateX(-10px);
 }
 
-.chatbot .inputMensagem #inputText {
+.chatbot .inputMensagem #pergunta {
   padding-left: 15px;
   border-radius: 30px;
   height: 30px;
@@ -412,7 +583,7 @@ header .buttonHeader::after {
   transition: width 0.35s ease-in-out;
 }
 
-.chatbot.expandido .inputMensagem #inputText {
+.chatbot.expandido .inputMensagem #pergunta {
   width: 550px;
   max-width: calc(100% - 140px);
 }
@@ -505,9 +676,34 @@ header .buttonHeader::after {
   border-radius: 10px;
 }
 
-.message {
+.chatbot.expandido .RespostaDoChatBot,
+.chatbot.expandido .PerguntasDousuario {
+  max-width: calc(100% - 110px);
+}
+
+.divPaiRespostaDoChatBot,
+.divPaiPergunta {
+  display: flex;
+}
+
+.divPaiRespostaDoChatBot {
+  display: flex;
+  width: calc(100% - 10px);
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.divPaiPergunta {
+  display: flex;
+  width: calc(100% - 10px);
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.PerguntasDousuario {
+  border-radius: 14px 4px 14px 14px;
+  background: #d4fac5;
   margin: 10px;
-  position: relative;
   max-width: 210px;
   padding-left: 8px;
   padding-right: 8px;
@@ -515,84 +711,27 @@ header .buttonHeader::after {
   color: #333;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;
+  padding: 10px;
   transition: max-width 0.35s ease-in-out;
 }
 
-.chatbot.expandido .message {
-  max-width: calc(100% - 110px);
-}
-
-.message.sender {
-  border-radius: 14px 4px 14px 14px;
-  background: #d1e7dd;
-  align-self: flex-end;
-}
-
-.message.receiver {
+.RespostaDoChatBot {
   border-radius: 4px 14px 14px 14px;
   background: #f1f0f0;
-  align-self: flex-start;
-}
-
-footer {
-  margin-top: 50px;
-  background-color: #f8f9fa;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-footer .blocoFooter {
-  font-size: 14px;
-  padding: 15px;
-  text-align: justify;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-footer .blocoFooter p {
-  margin: 0;
+  margin: 10px;
+  max-width: 210px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 13px;
   color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  padding: 10px;
+  transition: max-width 0.35s ease-in-out;
 }
 
-footer .blocoFooter span {
-  margin: 10px 0;
-}
-
-footer .itemFooter {
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: #4f9734;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer i {
-  margin-right: 8px;
-  color: #555;
-}
-
-footer .redesSociais {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 920px) {
-  .conteudoModal .text {
-    padding: 20px;
-    width: calc(100% - 70px);
-  }
-
-  .menuHeader {
-    display: none !important;
-  }
+.containerPerguntasERespostas {
+  width: 100%;
 }
 
 @media (max-width: 920px) {
@@ -600,41 +739,6 @@ footer .redesSociais {
     width: calc(100vw - 60px);
     height: 70vh;
   }
-
-  .partesHeader .title {
-    font-size: 1.4em;
-  }
-
-  .modal #title {
-    width: 100%;
-    height: 50px;
-    font-size: 1.5em;
-    text-align: center;
-    text-wrap: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  .buttonMenu {
-    display: block;
-  }
-
-  .buttonHeader {
-    display: none;
-  }
-
-  .conteudoModal .text {
-    font-size: 1em;
-  }
-  .conteudoModal {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-  .modal .close {
-    top: 20px;
-    right: 20px;
-  }
 }
+
+/* Fim Chatbot */

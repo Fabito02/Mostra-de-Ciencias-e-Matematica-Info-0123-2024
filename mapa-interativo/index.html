@@ -50,32 +50,46 @@
         </div>
     </div>
     <!-- Fim do modal -->
-
-    <!-- Começo chatbot -->
-    <button class="btChatbot" onclick="abrirChatbot()" title="Abrir/Fechar ChatBot">
-        <i class="fa-solid fa-robot"></i>
-    </button>
-    <div class="chatbot hide" id="chatbot">
-        <div class="topoChat">
-            <button class="expandirChat" onclick="expandirChat(this)">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </button>
-            <h2>ChatBot</h2>
-        </div>
-
-        <button class="close buttonStyle" onclick="fecharChatBot()">
-            <i class="fa-solid fa-xmark"></i>
+     <!-- Começo chatbot -->
+<button class="btChatbot" onclick="abrirChatbot()" title="Abrir/Fechar ChatBot">
+    <i class="fa-solid fa-robot"></i>
+</button>
+<div id="corpoChatBot" class="chatbot hide">
+    <div class="topoChat">
+        <button class="expandirChat" onclick="expandirChat(this)">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
         </button>
-        <div class="caixaMensagensChatbot"></div>
+        <h2>ChatBot</h2>
+    </div>
 
+    <div class="escolhaIcone" id="escolhaIcone">
+        <h1>Escolha um ícone:</h1>
+        <button class="botaoIcones" value="iconeAmarelo-removebg-preview.svg">
+            <img src="https://raw.githubusercontent.com/Luckikinhas/Chat-bot/main/iconeAmarelo-removebg-preview.svg" alt="Ícone Amarelo" class="icone">
+        </button>
+        <button class="botaoIcones" value="iconeVerde-removebg-preview.svg">
+            <img src="https://raw.githubusercontent.com/Luckikinhas/Chat-bot/main/iconeVerde-removebg-preview.svg" alt="Ícone Verde" class="icone">
+        </button>
+        <button class="botaoIcones" value="iconeVermelho-removebg-preview.svg">
+            <img src="https://raw.githubusercontent.com/Luckikinhas/Chat-bot/main/iconeVermelho-removebg-preview.svg" alt="Ícone Vermelho" class="icone">
+        </button>
+        <button class="botaoIcones" value="iconeAzul-removebg-preview.svg">
+            <img src="https://raw.githubusercontent.com/Luckikinhas/Chat-bot/main/iconeAzul-removebg-preview.svg" alt="Ícone Azul" class="icone">
+        </button>
+    </div>
+
+    <div class="caixaMensagensChatbot" id="caixaMensagensChatbot">
         <div class="inputMensagem">
-            <input type="text" id="inputText" placeholder="Escreva sua mensagem..." />
-            <button class="enviarMensagem">
+            <input type="text" id="pergunta" autocomplete="off" placeholder="Pergunte algo..." />
+            <button class="enviarMensagem" id="botao">
                 <i class="fa-solid fa-paper-plane"></i>
             </button>
         </div>
     </div>
-    <!-- Fim chatbot -->
+</div>
+<script type="module" src="../source/chatbot.js"></script>
+<!-- Fim chatbot -->
+
 
     <!-- Blur switch -->
     <button class="blurSwitch" id="blurSwitch" onclick="blurSwitch()" title="Ativar/Desativar Blur">
