@@ -1,59 +1,60 @@
+
 window.onload = blurStatus()
 
 let pampas = {
-    'Qual é a principal atividade econômica nos Pampas?': 'Pecuária',
+    'Qual é a principal atividade econômica no Pampa que reduz as áreas de vegetação nativa?': 'Expansão das monoculturas',
     'Qual é a principal característica do solo nos Pampas?': 'Solo fértil com textura argilosa',
-    'Qual é o principal animal ameaçado nos Pampas?': 'Pavão-marinheiro',
+    'Qual é o principal animal ameaçado nos Pampas?': 'Tamanduá',
     'Qual é a adaptação das plantas dos Pampas?': 'Capacidade de crescimento rápido após pastagens',
-    'Qual é uma ave emblemática dos Pampas?': 'Siriema',
-    'Qual é a estação chuvosa nos Pampas?': 'Primavera e verão',
-    'Qual é uma das principais fonte de água nos Pampas?': 'Águas subterrâneas',
-    'Quais são os principais impactos ambientais nas pampas devido à atividade agrícola?': 'A erosão do solo',
+    'Qual é um dos animais mais presentes no Pampas?': 'João-de-Barro',
+    'Qual bioma é conhecido por abrigar o Aquífero Guarani, um dos maiores reservatórios de água doce subterrânea do mundo?': 'Pampas',
+    'Qual bioma ocupa cerca de 63% do território do estado do Rio Grande do Sul e é caracterizado por campos nativos, coxilhas, matas ciliares e formações arbustivas?': 'Pampas',
+    'Quais são os principais impactos ambientais nas Pampas devido à ampliação das monoculturas?': 'Perda de biodiversidade e erosão do solo',
 };
 
 let caatinga = {
-    'Qual é uma das principais atividades econômicas da Caatinga?': 'Agricultura de subsistência',
+    'Qual é a principal atividade econômica na Caatinga?': 'Agricultura e pecuária',
     'Qual é a característica do solo da Caatinga?': 'Solo pobre em nutrientes e seco',
     'Qual é um animal ameaçado de extinção na Caatinga?': 'Tatu-bola',
     'Qual é a principal adaptação das plantas da Caatinga?': 'Folhas pequenas e resistentes à seca',
-    'Qual é a estação chuvosa na Caatinga?': 'Verão',
-    'Como a água é utilizada na Caatinga?': 'Irrigação para agricultura',
-    'Qual é uma ave comum na Caatinga?': 'Canário da Terra',
-    'Qual é o impacto das secas prolongadas na Caatinga?': 'Redução da vegetação e escassez de água',
+    'Qual bioma possui uma vegetação adaptada para sobreviver em condições extremas de seca, com plantas que realizam fotossíntese pelo caule?': 'Caatinga',
+    'Qual bioma brasileiro é caracterizado por um clima semiárido, vegetação adaptada à seca e abrange principalmente o nordeste do Brasil?': 'Caatinga',
+    'Qual é um mamífero comum da Caatinga?': 'Onça-parda',
+    'Qual é o impacto das secas prolongadas na Caatinga?': 'Extinção de espécies e escassez de água',
 };
 
-let pantanal = {
-    'Qual é a atividade econômica predominante no Pantanal?': 'Pecuária de gado',
+let pantanal = {//
+    'Qual é a principal atividade econômica no Pantanal?': 'Pecuária',
     'Qual é a característica do solo do Pantanal?': 'Solo alagadiço e rico em matéria orgânica',
-    'Qual é o impacto do desmatamento na fauna do Pantanal?': 'Redução de habitats e espécies ameaçadas',
-    'Qual é o período de maior intensidade de chuvas no Pantanal?': 'Estação chuvosa (verão)',
+    'Qual é o impacto da expansão do cultivo da soja no Pantanal?': 'Devido ao grande uso de ao agrotóxicos, pode prejudicar o ecossistema.',
+    'Qual bioma brasileiro se estende por partes do Paraguai e da Bolívia e é caracterizado por sua grande planície alagada?': 'Pantanal',
     'Qual é um animal típico do Pantanal?': 'Capivara',
-    'Qual é a principal fonte de água no Pantanal?': 'Rio Paraguai e áreas alagadas',
+    'Qual bioma ocupa cerca de 2% do território nacional e é caracterizado por sua grande planície que fica alagada em boa parte do ano?': 'Pantanal',
+    'Qual é um dos principais animais ameaçados de extinção no Pantanal?': 'Arara-azul',
     'Como as plantas do Pantanal lidam com as cheias?': 'Possuem raízes flutuantes',
-    'Qual animal do Pantanal é conhecido por suas longas pernas e adaptações para viver em ambientes alagados?': 'Cigana (tuiuiú)'
 };
 
 
 let mataAtlantica = {
-    'Qual é a principal atividade econômica da Mata Atlântica?': 'Turismo e extração de recursos naturais',
+    'Qual é a principal atividade econômica na Mata Atlântica?': 'Exploração dos recursos naturais e produção agrícola',
     'Qual é a característica do solo da Mata Atlântica?': 'Solo fértil e úmido',
-    'Qual é um dos principais animais ameaçados na Mata Atlântica?': 'Muriqui (ou mono-barrigudo)',
+    'Qual é um dos principais animais ameaçados na Mata Atlântica?': 'Mico-leão-dourado',
     'Como as plantas da Mata Atlântica se adaptam à umidade?': 'Folhas largas para captar luz e água',
     'Qual estação do ano é considerada a melhor para observar a biodiversidade na Mata Atlântica?':'Primavera',
     'Qual é um mamífero característico da Mata Atlântica?': 'Tamanduá-bandeira',
-    'Qual é um impacto ambiental causado pela urbanização nas áreas costeiras da Mata Atlântica?': 'Erosão costeira',
-    'Qual é o uso da água na Mata Atlântica?': 'Para abastecimento urbano e agricultura',
+    'Quais são os princpais impactos ambientais causado pela urbanização nas áreas costeiras da Mata Atlântica?': 'Fragmentação do habitat e erosão costeira',
+    'Qual bioma brasileiro é lar do mico-leão-dourado e do pau-brasil, mas hoje tem apenas 12% de sua área original?': 'Mata Atlântica',
 };
 
 let cerrado = {
-    'Qual é a principal cultura do Cerrado?': 'Soja e milho',
+    'Qual principal motivo da atual devastação no bioma?': 'Expansão agrícola',
     'Qual é a característica do solo do Cerrado?': 'Solo ácido e pobre em nutrientes',
-    'Qual é um dos principais animais ameaçados no Cerrado?': 'Lobo-guará',
+    'Qual é uma ave comum no Cerrado?': 'Gavião-pega-montanha',
     'Como as plantas do Cerrado se adaptam ao fogo?': 'Possuem cascas grossas e resiliência',
-    'Qual é a estação seca mais pronunciada no Cerrado?': 'Inverno',
+    'Qual bioma é considerado a savana mais rica do planeta, abrigando 5% de toda biodiversidade do mundo?': 'Cerrado',
     'Qual é um dos principais animais ameaçados no Cerrado?': 'Lobo-guará',
-    'Como a água é utilizada no Cerrado?': 'Irrigação de culturas como soja',
-    'Qual é o impacto da pecuária no Cerrado?': 'Desmatamento e degradação do solo',
+    'Qual bioma cobre 25% do território brasileiro, sendo a savana mais rica do planeta?': 'Cerrado',
+    'Qual é o impacto da expansão agrícola no Cerrado?': 'Desmatamento e perda de solo fértil',
 };
 
 let florestaAmazonica = {
@@ -61,39 +62,39 @@ let florestaAmazonica = {
     'Qual é a característica do solo da Floresta Amazônica?': 'Solo raso e pobre em nutrientes',
     'Qual é o principal mamífero ameaçado na Floresta Amazônica?': 'Onça-pintada',
     'Qual é a adaptação das árvores da Floresta Amazônica?': 'Folhagem densa para captar luz solar',
-    'Qual é a estação chuvosa predominante na Floresta Amazônica?': 'Durante o ano todo, mas com aumento no verão',
-    'Qual é uma ave típica da Floresta Amazônica?': 'Arara-azul',
-    'Qual é o impacto da exploração de madeira na Floresta Amazônica?': 'Desmatamento e perda de biodiversidade',
-    'Qual é o principal uso da água no Amazonas para as comunidades locais?': 'Para a pesca',
+    'Qual bioma é crucial para a regulação do clima global e atua como um grande “resfriador” atmosférico?': 'Floresta Amazônica',
+    'Qual é uma ave típica da Floresta Amazônica?': 'Tucano',
+    'Qual é o impacto das queimadas na Amazônia?': 'Redução da biodiversidade e aumento das emissões de CO2',
+    'Qual bioma é considerado o de maior biodiversidade do planeta e ocupa cerca de 47% do território brasileiro?': 'Amazônia',
 };
 
 
 // Objeto sobre atividades econômicas
 let atividadesEconomicas = {
-    'Qual é a principal atividade econômica nos Pampas?': 'Pecuária',
-    'Qual é uma das principais atividades econômicas da Caatinga?': 'Agricultura de subsistência',
-    'Qual é a atividade econômica predominante no Pantanal?': 'Pecuária de gado',
-    'Qual é a principal atividade econômica da Mata Atlântica?': 'Turismo e extração de recursos naturais',
-    'Qual é o impacto da pecuária no Cerrado?': 'Desmatamento e degradação do solo',
+    'Qual é a principal atividade econômica no Pampa que reduz as áreas de vegetação nativa?': 'Expansão das monoculturas',
+    'Qual é a principal atividade econômica na Caatinga?': 'Agricultura e pecuária',
+    'Qual é a principal atividade econômica no Pantanal?': 'Pecuária',
+    'Qual é a principal atividade econômica na Mata Atlântica?': 'Exploração dos recursos naturais e produção agrícola',
+    'Qual principal motivo da atual devastação no bioma?': 'Expansão agrícola',
     'Qual é uma das principais atividades econômicas da Floresta Amazônica?': 'Exploração de recursos florestais',
 };
 
-// Objeto sobre uso da água
-let usoDaAgua = {
-    'Qual é uma das principais fonte de água nos Pampas?': 'Águas subterrâneas',
-    'Como a água é utilizada na Caatinga?': 'Irrigação para agricultura',
-    'Qual é a principal fonte de água no Pantanal?': 'Rio Paraguai e áreas alagadas',
-    'Qual é o uso da água na Mata Atlântica?': 'Para abastecimento urbano e agricultura',
-    'Como a água é utilizada no Cerrado?': 'Irrigação de culturas como soja',
-    'Qual é o principal uso da água no Amazonas para as comunidades locais?': 'Para a pesca',
+// Objeto caracteristicas dos biomas
+let respostaBiomas = {
+    'Qual bioma ocupa cerca de 63% do território do estado do Rio Grande do Sul e é caracterizado por campos nativos, coxilhas, matas ciliares e formações arbustivas?': 'Pampas',
+    'Qual bioma brasileiro é caracterizado por um clima semiárido, vegetação adaptada à seca e abrange principalmente o nordeste do Brasil?': 'Caatinga',
+    'Qual bioma ocupa cerca de 2% do território nacional e é caracterizado por sua grande planície que fica alagada em boa parte do ano?': 'Pantanal',
+    'Qual bioma brasileiro é lar do mico-leão-dourado e do pau-brasil, mas hoje tem apenas 12% de sua área original?': 'Mata Atlântica',
+    'Qual bioma cobre 25% do território brasileiro, sendo a savana mais rica do planeta?': 'Cerrado',
+    'Qual bioma é considerado o de maior biodiversidade do planeta e ocupa cerca de 47% do território brasileiro?': 'Amazônia',
 };
 
-// Objeto sobre animais ameaçados
+// Objeto sobre animais ameaçados nos biomas
 let animaisAmeaçados = {
-    'Qual é o principal animal ameaçado nos Pampas?': 'Pavão-marinheiro',
+    'Qual é o principal animal ameaçado nos Pampas?': 'Tamanduá',
     'Qual é um animal ameaçado de extinção na Caatinga?': 'Tatu-bola',
-    'Qual animal do Pantanal é conhecido por suas longas pernas e adaptações para viver em ambientes alagados?': 'Cigana (tuiuiú)',
-    'Qual é um dos principais animais ameaçados na Mata Atlântica?': 'Muriqui (ou mono-barrigudo)',
+    'Qual é um dos principais animais ameaçados de extinção no Pantanal?': 'Arara-azul',
+    'Qual é um dos principais animais ameaçados na Mata Atlântica?': 'Mico-leão-dourado',
     'Qual é um dos principais animais ameaçados no Cerrado?': 'Lobo-guará',
     'Qual é o principal mamífero ameaçado na Floresta Amazônica?': 'Onça-pintada',
 };
@@ -108,24 +109,24 @@ let adaptacaoPlantas = {
     'Qual é a adaptação das árvores da Floresta Amazônica?': 'Folhagem densa para captar luz solar',
 };
 
-// Objeto sobre aves e fauna
+// Objeto sobre aves e fauna dos biomas
 let avesEFauna = {
-    'Qual é uma ave emblemática dos Pampas?': 'Siriema',
-    'Qual é uma ave comum na Caatinga?': 'Canário da Terra',
+    'Qual é um dos animais mais presentes no Pampas?': 'João-de-Barro',
+    'Qual é um mamífero comum da Caatinga?': 'Onça-parda',
     'Qual é um animal típico do Pantanal?': 'Capivara',
     'Qual é um mamífero característico da Mata Atlântica?': 'Tamanduá-bandeira',
-    'Qual é uma ave comum no Cerrado?': 'Tucano',
-    'Qual é uma ave típica da Floresta Amazônica?': 'Arara-azul',
+    'Qual é uma ave comum no Cerrado?': 'Gavião-pega-montanha',
+    'Qual é uma ave típica da Floresta Amazônica?': 'Tucano',
 };
 
 // Objeto sobre impacto ambiental
 let impactoAmbiental = {
-    'Quais são os principais impactos ambientais nas pampas devido à atividade agrícola?': 'A erosão do solo',
-    'Qual é o impacto das secas prolongadas na Caatinga?': 'Redução da vegetação e escassez de água',
-    'Qual é o impacto das queimadas no Pantanal?': 'Destruição de habitat e diminuição da biodiversidade',
-    'Qual é um impacto ambiental causado pela urbanização nas áreas costeiras da Mata Atlântica?':'Erosão Costeira',
-    'Qual é o impacto da pecuária no Cerrado?': 'Desmatamento e degradação do solo',
-    'Qual é o impacto da exploração de madeira na Floresta Amazônica?': 'Desmatamento e perda de biodiversidade',
+    'Quais são os principais impactos ambientais nas Pampas devido à ampliação das monoculturas?': 'Perda de biodiversidade e erosão do solo',
+    'Qual é o impacto das secas prolongadas na Caatinga?': 'Extinção de espécies e escassez de água',
+    'Qual é o impacto da expansão do cultivo da soja no Pantanal?': 'Devido ao grande uso de ao agrotóxicos, pode prejudicar o ecossistema.',
+    'Quais são os princpais impactos ambientais causado pela urbanização nas áreas costeiras da Mata Atlântica?': 'Fragmentação do habitat e erosão costeira',
+    'Qual é o impacto da expansão agrícola no Cerrado?': 'Desmatamento e perda de solo fértil',
+    'Qual é o impacto das queimadas na Amazônia?': 'Redução da biodiversidade e aumento das emissões de CO2',
 };
 
 // Objeto sobre características do solo
@@ -138,16 +139,15 @@ let caracteristicasDoSolo = {
     'Qual é a característica do solo da Floresta Amazônica?': 'Solo raso e pobre em nutrientes',
 };
 
-// Objeto sobre períodos de chuvas
-let periodoDeChuvas = {
-    'Qual é a estação chuvosa nos Pampas?': 'Primavera e verão',
-    'Qual é a estação chuvosa na Caatinga?': 'Verão',
-    'Qual é o período de maior intensidade de chuvas no Pantanal?': 'Estação chuvosa (verão)',
-    'Qual estação do ano é considerada a melhor para observar a biodiversidade na Mata Atlântica?':'Primavera',
-    'Qual é a estação seca mais pronunciada no Cerrado?': 'Inverno',
-    'Qual é a estação chuvosa predominante na Floresta Amazônica?': 'Durante o ano todo, mas com aumento no verão'
-};
-
+// Objeto sobre curiosidades dos biomas
+let curiosidades = {
+    'Qual bioma é conhecido por abrigar o Aquífero Guarani, um dos maiores reservatórios de água doce subterrânea do mundo?': 'Pampas',
+    'Qual bioma possui uma vegetação adaptada para sobreviver em condições extremas de seca, com plantas que realizam fotossíntese pelo caule?': 'Caatinga',
+    'Qual bioma brasileiro se estende por partes do Paraguai e da Bolívia e é caracterizado por sua grande planície alagada?': 'Pantanal',
+    'Qual bioma se estende por uma área que já foi de 1,3 milhões km², mas agora tem apenas 12% de sua extensão original devido à ação humana?': 'Mata Atlântica',
+    'Qual bioma é considerado a savana mais rica do planeta, abrigando 5% de toda biodiversidade do mundo?': 'Cerrado',
+    'Qual bioma é crucial para a regulação do clima global e atua como um grande “resfriador” atmosférico?': 'Floresta Amazônica',
+    };
 
 // Juntando tudo em um único objeto de biomas
 let biomasBrasileiros = {
@@ -158,20 +158,20 @@ let biomasBrasileiros = {
     cerrado,
     florestaAmazonica,
     atividadesEconomicas,
-    usoDaAgua,
+    respostaBiomas,
     animaisAmeaçados,
     adaptacaoPlantas,
     avesEFauna,
     impactoAmbiental,
     caracteristicasDoSolo,
-    periodoDeChuvas,
+    curiosidades,
 };
 
 
 // Lista de biomas
 let biomas = [pampas, caatinga, pantanal, mataAtlantica, cerrado, florestaAmazonica];
 
-let caracteristicasBiomas = [atividadesEconomicas, usoDaAgua, animaisAmeaçados, periodoDeChuvas, caracteristicasDoSolo, impactoAmbiental, avesEFauna, adaptacaoPlantas];
+let caracteristicasBiomas = [atividadesEconomicas, respostaBiomas, animaisAmeaçados, curiosidades, caracteristicasDoSolo, impactoAmbiental, avesEFauna, adaptacaoPlantas];
 
 // Função para coletar todas as respostas erradas
 function pegarTodasRespostas(numero, biomas, respCorreta) {
@@ -211,7 +211,7 @@ function sorteioAssunto(caracBiomas) {
 }
 
 function selecionarPerguntasRespostas() {
-    let caracteristicasBiomas2 = [atividadesEconomicas, usoDaAgua, animaisAmeaçados, periodoDeChuvas, caracteristicasDoSolo, impactoAmbiental, avesEFauna, adaptacaoPlantas];
+    let caracteristicasBiomas2 = [atividadesEconomicas, respostaBiomas, animaisAmeaçados, curiosidades, caracteristicasDoSolo, impactoAmbiental, avesEFauna, adaptacaoPlantas];
     let vetorRespostasselecionada = [];
     let vetorPerguntaseelecionada = [];
     let vetorTotalRespostasErradas = [];
@@ -238,7 +238,7 @@ function selecionarPerguntasRespostas() {
 
             varControl++;
         }
-        caracteristicasBiomas2 = [atividadesEconomicas, usoDaAgua, animaisAmeaçados, periodoDeChuvas, caracteristicasDoSolo, impactoAmbiental, avesEFauna, adaptacaoPlantas];
+        caracteristicasBiomas2 = [atividadesEconomicas, respostaBiomas, animaisAmeaçados, curiosidades, caracteristicasDoSolo, impactoAmbiental, avesEFauna, adaptacaoPlantas];
     }
     return {
         pergunta: vetorPerguntaseelecionada,
