@@ -57,10 +57,13 @@
     <!-- Fim do modal -->
      
     <!-- Começo chatbot -->
-<button class="btChatbot" onclick="abrirChatbot()" title="Abrir/Fechar ChatBot">
+<button class="btChatbot" onclick="abrirOuFecharChatbot()" title="Abrir/Fechar ChatBot">
   <i class="fa-solid fa-robot"></i>
 </button>
 <div id="corpoChatBot" class="chatbot hide">
+  <button class="close buttonStyle" onclick="fecharChatBot()">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
   <div class="topoChat">
       <button class="expandirChat" onclick="expandirChat(this)">
           <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
