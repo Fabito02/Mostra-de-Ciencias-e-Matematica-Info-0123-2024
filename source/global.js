@@ -70,7 +70,7 @@ function verificarScroll() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     button.style.transform = "";
   } else {
-    button.style.transform = "translateY(140px)";
+    button.style.transform = "translateY(180px)";
   }
 }
 
@@ -79,3 +79,33 @@ verificarScroll()
 window.onscroll = function() {
   verificarScroll();
 };
+
+function blurStatus() {
+    if (localStorage.getItem("blurStatus") === 'true') {
+        document.querySelectorAll('*').forEach(element => {
+            element.style.backdropFilter = '';
+        });
+    } else {
+        document.querySelectorAll('*').forEach(element => {
+            element.style.backdropFilter = 'none';
+        });
+    }
+}
+
+window.onload = blurStatus()
+
+function blurSwitch() {
+    if (localStorage.getItem("blurStatus") === 'true') {
+        document.querySelectorAll('*').forEach(element => {
+            element.style.backdropFilter = 'none';
+        });
+
+        localStorage.setItem("blurStatus", 'false')
+    } else {
+        document.querySelectorAll('*').forEach(element => {
+            element.style.backdropFilter = '';
+        });
+
+        localStorage.setItem("blurStatus", 'true')
+    }
+}

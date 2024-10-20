@@ -281,7 +281,7 @@ header .buttonHeader::after {
   overflow: hidden;
 }
 
-.voltarTopo {
+.blurSwitch {
   cursor: pointer;
   font-size: 18px;
   display: flex;
@@ -292,6 +292,34 @@ header .buttonHeader::after {
   outline: none;
   position: fixed;
   bottom: 80px;
+  right: 25px;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: #629151;
+  backdrop-filter: blur(15px);
+  z-index: 10;
+  transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.blurSwitch:hover {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.234);
+}
+.blurSwitch:active {
+  transform: scale(0.9);
+}
+
+.voltarTopo {
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  outline: none;
+  position: fixed;
+  bottom: 135px;
   right: 25px;
   height: 42px;
   width: 42px;
@@ -341,7 +369,7 @@ header .buttonHeader::after {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  z-index: 10;
+  z-index: 11;
   position: fixed;
   background-color: var(--cor-box-background);
   border-radius: 14px;
