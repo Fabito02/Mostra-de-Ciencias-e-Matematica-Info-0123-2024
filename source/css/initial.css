@@ -112,6 +112,153 @@ footer {
   width: 100%;
 }
 
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+  aspect-ratio: 16 / 9;
+  max-width: 1000px;
+  overflow: hidden;
+  border-radius: 20px;
+  grid-column: 1 / 7;
+}
+
+.slides {
+  width: 800%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  transition: 1.5s;
+  width: 90vw;
+  aspect-ratio: 16 / 9;
+  max-width: 1000px;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 100%;
+  margin-top: -20px;
+  display: flex;
+  display: none;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 1px solid #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.manual-btn:hover {
+  background-color: #b7ffac;
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: calc(-100% / 8);
+}
+
+#radio3:checked~.first {
+  margin-left: calc((-100% / 8) * 2);
+}
+
+#radio4:checked~.first {
+  margin-left: calc((-100% / 8) * 3);
+}
+
+#radio5:checked~.first {
+  margin-left: calc((-100% / 8) * 4);
+}
+
+#radio6:checked~.first {
+  margin-left: calc((-100% / 8) * 5);
+}
+
+#radio7:checked~.first {
+  margin-left: calc((-100% / 8) * 6);
+}
+
+#radio8:checked~.first {
+  margin-left: calc((-100% / 8) * 7);
+}
+
+.navigation-auto div {
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: calc(100% - 55%);
+  display: flex;
+  display: none;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 10px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+  background-color: #909090;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+  background-color: #909090;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+  background-color: #909090;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+  background-color: #909090;
+}
+
+#radio5:checked~.navigation-auto .auto-btn5 {
+  background-color: #909090;
+}
+
+#radio6:checked~.navigation-auto .auto-btn6 {
+  background-color: #909090;
+}
+
+#radio7:checked~.navigation-auto .auto-btn7 {
+  background-color: #909090;
+}
+
+#radio8:checked~.navigation-auto .auto-btn8 {
+  background-color: #909090;
+}
+
+/* Para auterar o tamanho do slider deve se mexer no slider (width, height), slides (width, height), slide (width), #radio:checked, */
+
 @media (min-width: 1110px) {
   .containerBlocks .block.center {
     transform: scale(1.12);
