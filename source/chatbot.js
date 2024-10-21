@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", async function comecar_cod() {
   allPrompts.push(
     "Agora que acabamos com os biomas brasileiros, vamos falar sobre alguns comportamentos, características dicas e informações necessárias que você deve seguir:"
   );
-  allPrompts.push("seu nome vai ser Ifinho."); //pode mudar o nome se quiser era só um teste
+  allPrompts.push("seu nome vai ser IFinho."); //pode mudar o nome se quiser era só um teste
   allPrompts.push(
     "sempre que alguem perguntar qual sua missão ou algo relativo, sua resposta vai ser: é fornecer informações sobre os biomas brasileiros para alunos, educadores e qualquer pessoa com interesse em aprender sobre os biomas do Brasil."
   );
