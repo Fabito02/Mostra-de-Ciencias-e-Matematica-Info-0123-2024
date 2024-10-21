@@ -31,6 +31,8 @@ function carregarMateria(e) {
         materia.querySelector('.tituloMateria').innerHTML = `${materiaData.titulo}<div class="dataMateria">${materiaData.data}</div>`
         materia.querySelector('.imgMateria').src = materiaData.linkImgMateria
         materia.querySelector('.descricaoImagemMateria').innerHTML = materiaData.descricaoImagemMateria
+        materia.querySelector('.imgMateria').setAttribute("alt", materiaData.fonte)
+        materia.querySelector('.fonteImagem').innerHTML = materiaData.fonte
         materia.querySelector('.conteudoMateria').innerHTML = materiaData.conteudoMateria
         materia.querySelector('.imgAutor').src = materiaData.linkFotoAutor
         materia.querySelector('.nome').innerHTML = materiaData.nomeAutor
