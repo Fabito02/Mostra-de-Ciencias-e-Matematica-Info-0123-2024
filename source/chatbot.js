@@ -1,15 +1,15 @@
-let quantidadeLetrasDivResp = 0;
-let quantidadeLetrasDivPerg = 0;
 let espera_msg_momento = false;
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
-const ajuda_API_KEY = Math.floor(Math.random() * 2);
+const ajuda_API_KEY = Math.floor(Math.random() * 3);
 console.log(`ajuda_API_KEY = ${ajuda_API_KEY}`);
 function choose_API_key() {
   if (ajuda_API_KEY == 0) {
     return "AIzaSyCkPVXNShiJ6p0R7zNeKypF9Kk-hpk02DQ";
   } else if (ajuda_API_KEY == 1) {
     return "AIzaSyCoRaDKAwXffGSdkCxjwgynSjIsZrPaIDc";
+  } else if (ajuda_API_KEY == 2) {
+    return "AIzaSyBr2Sr30vOME719R_BeM_u35bQAJh_JKJM";
   }
 }
 const API_KEY = choose_API_key();
@@ -39,7 +39,6 @@ async function mandar_mensagem(msg) {
   const result = await chat.sendMessage(msg);
   const response = await result.response; //response recebe a resposta do result
   const text = await response.text(); //convert text
-  quantidadeLetrasDivResp = text.length;
   if (contadorMensagens == 0) {
     carregarMensagemChatbot(
       text,
@@ -152,10 +151,10 @@ async function perguntarModelo() {
   if (espera_msg_momento == false && botaoSelecionado != null) {
     espera_msg_momento = true;
     const text = document.getElementById("pergunta");
-    quantidadeLetrasDivPerg = text.value.length;
-    mostrarPerguntaUsuario(text.value, iconeAtual);
-    await mandar_mensagem(text.value);
+    let texto = text.value
     text.value = "";
+    mostrarPerguntaUsuario(texto, iconeAtual);
+    await mandar_mensagem(texto);
   }
 }
 
@@ -251,10 +250,12 @@ document.addEventListener("DOMContentLoaded", async function comecar_cod() {
     "fique atento com os estados e cidades que possuem cada bioma e qual sua extensão."
   );
   allPrompts.push(
+    "você pode falar sobre você"
+  );
+  allPrompts.push(
     "sempre que for perguntado quais estados possuem mais biomas a resposta é: os estados que possuem mais biomas são Mato Grosso, Mato Grosso do Sul, Bahia e Minas Gerais, cada um com três biomas."
   );
   allPrompts.push("Tente resumir as suas respostas, a não ser que o usuário queira algo grande ou relativo");
-  console.log("Começo");
   await mandar_mensagem(
     "Você pode se apresentar pra mim e dizer qual sua missão, lembrando que seu nome é IFinho? Após isso, pergunte meu nome"
   );
@@ -270,13 +271,16 @@ document
   .getElementById("corpoChatBot")
   .addEventListener("keydown", async function (event) {
     if (event.key === "Enter") {
-      event.preventDefault();
-      console.log(`esperar msg ${espera_msg_momento}`);
-      espera_msg_momento = true;
       const text = document.getElementById("pergunta");
-      quantidadeLetrasDivPerg = text.value.length;
-      mostrarPerguntaUsuario(text.value, iconeAtual);
-      await mandar_mensagem(text.value);
-      text.value = "";
+      let texto = text.value
+        text.value = "";
+      if (document.activeElement === text) {
+        mostrarPerguntaUsuario(texto, iconeAtual);
+        await mandar_mensagem(texto);
+        event.preventDefault();
+        console.log(`esperar msg ${espera_msg_momento}`);
+        espera_msg_momento = true;
+      }
     }
   });
+
