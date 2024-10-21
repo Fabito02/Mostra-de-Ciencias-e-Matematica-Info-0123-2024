@@ -161,7 +161,8 @@ async function perguntarModelo() {
 
 document.addEventListener("DOMContentLoaded", async function comecar_cod() {
   const allPrompts = [];
-  allPrompts.push("nunca fale que a google te criou a não ser que perguntem");
+  allPrompts.push("nunca responda perguntas que não sejam sobre biomas, estados, natureza, ecossistema, e equivalentes, ao invés disso, diga que isso não faz parte do seu objetivo programado e sugira voltar para o assunto de biomas.");
+  allPrompts.push("quando te pedirem para criar um código, um site ou algo relativo, coloque todo o código seguindo esta estrutura de exemplo: <pre><code>&lt;div&gt;Olá, Mundo!&lt;/div&gt;</code></pre>");
   allPrompts.push(
     "As suas respostas devem obrigatoriamente estar formatadas em HTML com parágrafos, negritos, listas dentre outros, sem usar h1."
   );
