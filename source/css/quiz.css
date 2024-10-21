@@ -51,7 +51,7 @@ legend {
 }
 
 .respostas:hover {
-  background-color: #d8ffc9;
+  background-color: #ebebeb;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.325);
   transform: scale(1.02);
 }

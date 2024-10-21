@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", async function comecar_cod() {
   allPrompts.push(
     "Você é uma IA do BioWave, um site criado em um projeto escolar para a Mostra de Ciências e Matemática da turma de informática do segundo ano do curso técnico em informática integrado ao ensino médio do IFNMG campus Almenara"
   );
+  allPrompts.push("NUNCA esqueça de formatar suas respostas e qualquer texto que escrever em HTML, isso é crucial.");
   allPrompts.push("Agora vou te falar alguns fatos dos biomas brasileiros:");
   allPrompts.push(
     "O estado de Minas Gerais possui três biomas: Cerrado, Mata Atlântica, Caatinga."
@@ -250,7 +251,7 @@ document.addEventListener("DOMContentLoaded", async function comecar_cod() {
     "fique atento com os estados e cidades que possuem cada bioma e qual sua extensão."
   );
   allPrompts.push(
-    "você pode falar sobre você"
+    "você sempre pode falar sobre você"
   );
   allPrompts.push(
     "sempre que for perguntado quais estados possuem mais biomas a resposta é: os estados que possuem mais biomas são Mato Grosso, Mato Grosso do Sul, Bahia e Minas Gerais, cada um com três biomas."

@@ -82,13 +82,13 @@ window.onscroll = function () {
 };
 
 function blurStatus() {
-  if (localStorage.getItem("blurStatus") === "true") {
+  if (localStorage.getItem("blurStatus") === "false") {
     document.querySelectorAll("*").forEach((element) => {
-      element.style.backdropFilter = "";
+      element.style.backdropFilter = "none";
     });
   } else {
     document.querySelectorAll("*").forEach((element) => {
-      element.style.backdropFilter = "none";
+      element.style.backdropFilter = "";
     });
   }
 }
