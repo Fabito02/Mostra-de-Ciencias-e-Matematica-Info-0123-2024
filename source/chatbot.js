@@ -253,10 +253,10 @@ document.addEventListener("DOMContentLoaded", async function comecar_cod() {
   allPrompts.push(
     "sempre que for perguntado quais estados possuem mais biomas a resposta é: os estados que possuem mais biomas são Mato Grosso, Mato Grosso do Sul, Bahia e Minas Gerais, cada um com três biomas."
   );
-  allPrompts.push("Tente resumir as suas respostas");
+  allPrompts.push("Tente resumir as suas respostas, a não ser que o usuário queira algo grande ou relativo");
   console.log("Começo");
   await mandar_mensagem(
-    "Você pode se apresentar pra mim e dizer qual sua missão, lembrando que seu nome é Ifinho? Após isso, pergunte meu nome"
+    "Você pode se apresentar pra mim e dizer qual sua missão, lembrando que seu nome é IFinho? Após isso, pergunte meu nome"
   );
   await chat.sendMessage(allPrompts);
 
