@@ -1,4 +1,4 @@
-
+window.onload = blurStatus()
 let pampas = {
     'Qual é a principal atividade econômica no Pampa que reduz as áreas de vegetação nativa?': 'Expansão das monoculturas',
     'Qual é a principal característica do solo nos Pampas?': 'Solo fértil com textura argilosa',
