@@ -36,7 +36,7 @@ header {
   justify-content: space-between;
   height: 70px;
   z-index: 5;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   box-shadow: 0px 6px 8px 0px #00000015;
   position: fixed;
   top: 0;
@@ -96,7 +96,7 @@ header .buttonHeader::after {
   pointer-events: none;
   opacity: 0;
   transform: translateY(-10px);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   padding: 10px;
   padding-bottom: 0px;
   border-radius: 12px;
@@ -248,7 +248,7 @@ header .buttonHeader::after {
   background-color: #00000053;
   z-index: 1000;
   position: fixed;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
 }
 
 .conteudoModal {
@@ -305,7 +305,7 @@ header .buttonHeader::after {
   width: 42px;
   border-radius: 50%;
   background-color: #629151;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   z-index: 10;
   transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
@@ -333,7 +333,7 @@ header .buttonHeader::after {
   width: 42px;
   border-radius: 50%;
   background-color: #629151;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   z-index: 10;
   transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
@@ -361,7 +361,7 @@ header .buttonHeader::after {
   width: 42px;
   border-radius: 50%;
   background-color: #629151;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   z-index: 10;
   transition: box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
@@ -372,7 +372,6 @@ header .buttonHeader::after {
 .btChatbot:active {
   transform: scale(0.9);
 }
-
 
 #chatIframe {
   position: fixed;
@@ -444,7 +443,6 @@ footer .redesSociais {
 }
 
 @media (max-width: 920px) {
-
   .partesHeader .title {
     font-size: 1.4em;
   }
@@ -483,13 +481,12 @@ footer .redesSociais {
   }
 }
 
-
-
 /* Chatbot */
 
 .conteinerIconeChat,
 .conteinerIconeUsuario,
-.iconeImg, .icone {
+.iconeImg,
+.icone {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -542,12 +539,13 @@ footer .redesSociais {
   justify-content: center;
   background-color: var(--cor-box-background);
   border-radius: 14px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   height: 400px;
   width: 340px;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
   transform: translateX(0);
-  transition: transform 0.3s ease, width 0.35s ease-in-out, height 0.35s ease-in-out;
+  transition: transform 0.3s ease, width 0.35s ease-in-out,
+    height 0.35s ease-in-out;
   padding-top: 40px;
   position: fixed;
   right: 20px;

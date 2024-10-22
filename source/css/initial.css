@@ -39,7 +39,7 @@ footer {
   max-width: 800px;
   position: absolute;
   border-radius: 20px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   background-color: #ffffff8d;
   padding: 25px;
   right: 100px;

@@ -119,7 +119,7 @@ body {
   top: 90px;
   left: calc(50% - 40px);
   z-index: 1;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.213);
 }
 
@@ -171,7 +171,7 @@ body {
 }
 
 .zoomButton {
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   cursor: pointer;
   color: var(--cor-texto);
   font-size: 18px;
@@ -202,7 +202,7 @@ body {
   left: 15px;
   height: 210px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
 }
 
@@ -263,7 +263,7 @@ body {
   top: 90px;
   right: 15px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
 }
 
@@ -275,7 +275,7 @@ body {
   bottom: 15px;
   left: 15px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.234);
 }
 
@@ -497,7 +497,7 @@ body {
   position: absolute;
   background-color: var(--cor-box-background);
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   z-index: 1;
 }
 
@@ -668,7 +668,7 @@ body {
   transform: translateX(0px) translateY(10px);
   z-index: 10;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.199);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   transition: width 0.15s ease-out, height 0.15s ease-out,
     transform 0.1s ease-out, visibility 0.1s ease-out, font-size 0.15s ease-out;
 }
@@ -837,7 +837,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
     transition: transform 0.5s ease-in-out;
   }
 
