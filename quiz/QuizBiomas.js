@@ -1,6 +1,4 @@
-
 window.onload = blurStatus()
-
 let pampas = {
     'Qual é a principal atividade econômica no Pampa que reduz as áreas de vegetação nativa?': 'Expansão das monoculturas',
     'Qual é a principal característica do solo nos Pampas?': 'Solo fértil com textura argilosa',
@@ -47,7 +45,7 @@ let mataAtlantica = {
 };
 
 let cerrado = {
-    'Qual principal motivo da atual devastação no bioma?': 'Expansão agrícola',
+    'Qual principal motivo da atual devastação no cerrado?': 'Expansão agrícola',
     'Qual é a característica do solo do Cerrado?': 'Solo ácido e pobre em nutrientes',
     'Qual é uma ave comum no Cerrado?': 'Gavião-pega-montanha',
     'Como as plantas do Cerrado se adaptam ao fogo?': 'Possuem cascas grossas e resiliência',
@@ -75,7 +73,7 @@ let atividadesEconomicas = {
     'Qual é a principal atividade econômica na Caatinga?': 'Agricultura e pecuária',
     'Qual é a principal atividade econômica no Pantanal?': 'Pecuária',
     'Qual é a principal atividade econômica na Mata Atlântica?': 'Exploração dos recursos naturais e produção agrícola',
-    'Qual principal motivo da atual devastação no bioma?': 'Expansão agrícola',
+    'Qual principal motivo da atual devastação no cerrado?': 'Expansão agrícola',
     'Qual é uma das principais atividades econômicas da Floresta Amazônica?': 'Exploração de recursos florestais',
 };
 
